@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#004B93">
+<title>Juego del cliente · TORNILLÖN</title>
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+:root{
+  --azul:#004B93; --amarillo:#FFD100; --marino:#0A2540; --gris:#E0E6ED; --blanco:#FFFFFF;
+  --in:#FFFFFF; --out:#D4E6FA; --muted:#5b6b7f; --good:#1E8E4E; --mid:#C98A00; --bad:#C62828;
+  --shadow:0 1px 1.5px rgba(10,37,64,.18);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;height:100%;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--marino);color:var(--marino);-webkit-font-smoothing:antialiased;}
+button{font-family:inherit;}
+.phone{position:relative;max-width:480px;margin:0 auto;height:100vh;height:100dvh;display:flex;flex-direction:column;background:var(--gris);overflow:hidden;}
+@media (min-width:700px) and (min-height:700px){ .phone{height:min(100dvh,920px);margin-top:max(0px,calc((100dvh - 920px)/2));border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.45);} }
+/* Cabecera */
+.header{background:var(--azul);color:#fff;display:flex;align-items:center;gap:10px;padding:10px 10px 10px 8px;flex-shrink:0;min-height:60px;}
+.back{font-size:22px;opacity:.85;padding:0 2px;}
+.avatar{width:40px;height:40px;border-radius:50%;background:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--azul);overflow:hidden;font-size:16px;}
+.avatar img{width:100%;height:100%;object-fit:cover;}
+.h-info{min-width:0;flex:1;}
+.h-name{font-weight:700;font-size:16px;display:flex;align-items:center;gap:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.verif{display:inline-flex;width:16px;height:16px;border-radius:50%;background:#25D366;color:#fff;font-size:11px;align-items:center;justify-content:center;flex-shrink:0;}
+.h-status{font-size:12.5px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.h-status.typing{color:var(--amarillo);font-weight:600;}
+.chip{background:var(--amarillo);color:var(--marino);font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap;flex-shrink:0;}
+.chip:empty{display:none;}
+.progress{display:flex;gap:3px;padding:5px 10px;background:var(--marino);flex-shrink:0;}
+.progress i{flex:1;height:4px;border-radius:3px;background:rgba(255,255,255,.22);transition:background .3s;}
+.progress i.done{background:var(--amarillo);}
+/* Chat */
+.chat{flex:1;overflow-y:auto;padding:12px 10px 14px;display:flex;flex-direction:column;gap:4px;scroll-behavior:smooth;
+  background-color:var(--gris);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23004B93' stroke-opacity='.07' stroke-width='2'%3E%3Cpath d='M14 10h10M19 10v14M15 14l8 2M15 19l8 2'/%3E%3Cpath d='M52 50h14v4M60 50v16'/%3E%3Ccircle cx='60' cy='18' r='5'/%3E%3Cpath d='M57.5 18h5'/%3E%3C/g%3E%3C/svg%3E");}
+.day{align-self:center;background:#fff;color:var(--muted);font-size:12px;padding:4px 10px;border-radius:8px;margin:4px 0 8px;box-shadow:var(--shadow);}
+.note{align-self:center;background:#FFF4C2;color:#5a4a00;font-size:12.5px;padding:6px 11px;border-radius:8px;margin:6px auto;text-align:center;max-width:88%;box-shadow:var(--shadow);line-height:1.35;}
+.note.sec{background:#fff;color:var(--muted);}
+.msg{max-width:84%;padding:6px 8px 4px 9px;border-radius:9px;font-size:15px;line-height:1.38;box-shadow:var(--shadow);position:relative;word-wrap:break-word;animation:pop .18s ease-out;}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.msg.in{background:var(--in);align-self:flex-start;border-top-left-radius:2px;}
+.msg.out{background:var(--out);align-self:flex-end;border-top-right-radius:2px;}
+.msg .who{font-size:12.5px;font-weight:700;color:var(--azul);margin-bottom:1px;}
+.msg .t{white-space:pre-wrap;}
+.msg .time{float:right;font-size:11px;color:var(--muted);margin:6px 0 -2px 10px;line-height:1;}
+.msg.out .time::after{content:" ✓✓";color:#2d8cff;letter-spacing:-3px;}
+.msg.img{padding:4px;}
+.msg.img .pic{display:block;width:250px;max-width:100%;border-radius:6px;overflow:hidden;cursor:zoom-in;background:#fff;}
+.msg.img .pic svg{display:block;width:100%;height:auto;}
+.msg .cap{padding:5px 5px 1px;font-size:14px;}
+/* Documento */
+.doc{display:flex;align-items:center;gap:10px;background:rgba(0,75,147,.07);border-radius:7px;padding:10px;cursor:pointer;min-width:220px;border:none;width:100%;text-align:left;color:inherit;font-size:14px;}
+.doc .ico{width:34px;height:42px;border-radius:4px;background:#E53935;color:#fff;font-size:10px;font-weight:800;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5px;flex-shrink:0;position:relative;}
+.doc .ico::before{content:"";position:absolute;top:0;right:0;border-style:solid;border-width:0 9px 9px 0;border-color:transparent #fff transparent transparent;opacity:.6;}
+.doc b{display:block;font-size:14px;word-break:break-all;}
+.doc small{color:var(--muted);font-size:12px;}
+/* Nota de voz */
+.audio{display:flex;align-items:center;gap:9px;min-width:230px;padding:2px 0;}
+.play{width:36px;height:36px;border-radius:50%;border:none;background:var(--azul);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;}
+.wave{flex:1;display:flex;align-items:center;gap:2px;height:28px;}
+.wave span{flex:1;background:var(--muted);opacity:.4;border-radius:2px;}
+.wave span.on{background:var(--azul);opacity:1;}
+.a-dur{font-size:11.5px;color:var(--muted);width:30px;text-align:right;}
+.transcript{margin-top:5px;font-size:13.5px;background:rgba(0,75,147,.06);border-left:3px solid var(--amarillo);padding:5px 7px;border-radius:4px;font-style:italic;}
+.transcript::before{content:"Transcripción: ";font-style:normal;font-weight:700;font-size:11.5px;color:var(--muted);display:block;}
+/* Escribiendo */
+.typing{align-self:flex-start;background:#fff;border-radius:9px;border-top-left-radius:2px;padding:11px 14px;display:inline-flex;gap:4px;box-shadow:var(--shadow);}
+.typing span{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:blink 1.2s infinite ease-in-out;}
+.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+.waiting{align-self:center;margin:8px auto;background:#fff;color:var(--marino);border-radius:12px;padding:9px 14px;width:min(290px,86%);font-size:13px;text-align:center;box-shadow:var(--shadow);}
+.bar{height:4px;background:var(--gris);border-radius:3px;margin-top:7px;overflow:hidden;}
+.bar i{display:block;height:100%;width:0;background:var(--amarillo);}
+/* Notificación entrante */
+.toast{position:absolute;left:10px;right:10px;top:8px;z-index:25;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.3);padding:10px 12px;display:flex;gap:10px;align-items:center;transform:translateY(-130%);transition:transform .35s ease;font-size:13.5px;}
+.toast.show{transform:none;}
+.toast .avatar{width:36px;height:36px;background:var(--gris);}
+.toast b{display:block;font-size:13px;}
+/* Bandeja de opciones */
+.tray{background:#fff;border-top:3px solid var(--amarillo);padding:10px 10px 12px;display:flex;flex-direction:column;gap:7px;flex-shrink:0;max-height:52%;overflow-y:auto;}
+.tray:empty{display:none;}
+.tray .ask{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin:0 2px -1px;}
+.opt{background:#fff;color:var(--marino);border:1.5px solid #c8d3df;border-radius:12px;padding:10px 12px;font-size:14.5px;text-align:left;cursor:pointer;line-height:1.3;transition:border-color .15s,background .15s;}
+.opt:hover{border-color:var(--azul);background:#f3f8fe;}
+.opt:active{transform:scale(.99);}
+.opt:focus-visible,.btn:focus-visible,.play:focus-visible{outline:3px solid var(--amarillo);outline-offset:2px;}
+/* Finales en el chat */
+.end{align-self:center;margin:14px auto 6px;padding:12px 16px;border-radius:14px;color:#fff;text-align:center;font-size:14px;max-width:90%;box-shadow:0 4px 14px rgba(0,0,0,.2);}
+.end.good{background:var(--good);} .end.mid{background:var(--mid);} .end.bad{background:var(--bad);}
+.end strong{display:block;font-size:17px;margin-bottom:3px;}
+/* Pantallas de inicio y resultado */
+.screen{position:absolute;inset:0;z-index:30;background:var(--gris);overflow-y:auto;display:flex;flex-direction:column;align-items:center;padding:24px 20px 28px;text-align:center;transition:opacity .3s;}
+.screen.hide{opacity:0;pointer-events:none;}
+.screen[hidden]{display:none;}
+.screen .logo{width:200px;max-width:70%;height:auto;margin-top:6px;}
+.screen h1{font-size:25px;line-height:1.15;margin:14px 0 2px;color:var(--marino);}
+.screen .sub{color:var(--azul);font-weight:700;font-size:14px;}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 8px rgba(10,37,64,.12);padding:13px 15px;margin-top:14px;width:100%;max-width:400px;text-align:left;font-size:14.5px;line-height:1.45;}
+.card h3{margin:0 0 6px;font-size:15px;color:var(--azul);}
+.card ul{margin:4px 0 0;padding-left:20px;}
+.card li{margin:3px 0;}
+.field{display:flex;flex-direction:column;gap:5px;width:100%;max-width:400px;margin-top:14px;text-align:left;font-size:13px;font-weight:700;color:var(--muted);}
+.field input{font-size:16px;padding:12px 13px;border-radius:12px;border:1.5px solid #c8d3df;outline:none;color:var(--marino);}
+.field input:focus{border-color:var(--azul);}
+.btn{margin-top:14px;width:100%;max-width:400px;border:none;border-radius:14px;padding:15px;font-size:16.5px;font-weight:800;cursor:pointer;background:var(--amarillo);color:var(--marino);box-shadow:0 5px 14px rgba(255,209,0,.35);}
+.btn.sec{background:var(--azul);color:#fff;box-shadow:none;font-size:15px;padding:13px;font-weight:700;}
+.btn.ghost{background:#fff;color:var(--azul);border:1.5px solid var(--azul);box-shadow:none;font-size:15px;padding:12px;font-weight:700;}
+.btn:active{transform:scale(.98);}
+.meta{margin-top:12px;font-size:12.5px;color:var(--muted);}
+.res-head{width:100%;max-width:400px;border-radius:16px;color:#fff;padding:16px;margin-top:8px;}
+.res-head.good{background:var(--good);} .res-head.mid{background:var(--mid);} .res-head.bad{background:var(--bad);}
+.res-head .big{font-size:40px;font-weight:900;line-height:1;margin:6px 0 2px;}
+.res-head .tt{font-size:19px;font-weight:800;}
+.comp{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13.5px;}
+.comp span:first-child{width:122px;flex-shrink:0;font-weight:600;}
+.comp .cb{flex:1;height:10px;background:var(--gris);border-radius:99px;overflow:hidden;}
+.comp .cb i{display:block;height:100%;border-radius:99px;background:var(--azul);transition:width .9s ease;}
+.comp b{width:42px;text-align:right;font-variant-numeric:tabular-nums;}
+.dec{border-top:1px solid var(--gris);padding:8px 0;font-size:13.5px;}
+.dec:first-of-type{border-top:none;}
+.dec .dl{font-weight:700;}
+.dec .fb{color:var(--muted);margin-top:2px;}
+.ok{color:var(--good);} .meh{color:var(--mid);} .ko{color:var(--bad);}
+.found{font-size:13px;color:var(--muted);margin-top:6px;}
+.copied{color:var(--good);font-weight:700;font-size:13px;min-height:18px;margin-top:6px;}
+/* Modal visor */
+.modal{position:absolute;inset:0;z-index:40;background:rgba(10,37,64,.82);display:flex;flex-direction:column;padding:12px;}
+.modal[hidden]{display:none;}
+.modal .mbar{display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:14px;padding:4px 4px 10px;gap:10px;}
+.modal .mbar button{background:var(--amarillo);border:none;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;color:var(--marino);}
+.modal .mbody{flex:1;overflow:auto;background:#fff;border-radius:10px;padding:14px;}
+.modal .mbody svg{width:100%;height:auto;display:block;}
+/* Documentos simulados */
+.pdf{font-size:12.5px;color:#222;line-height:1.4;}
+.pdf .ph{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid var(--amarillo);padding-bottom:8px;margin-bottom:10px;gap:8px;}
+.pdf .ph img{width:140px;height:auto;}
+.pdf .ph .r{text-align:right;font-size:11px;color:var(--muted);}
+.pdf h2{color:var(--azul);font-size:17px;margin:4px 0 8px;}
+.pdf table{width:100%;border-collapse:collapse;margin:8px 0;}
+.pdf th{background:var(--azul);color:#fff;text-align:left;padding:5px;font-size:11.5px;}
+.pdf td{border-bottom:1px solid var(--gris);padding:5px;vertical-align:top;}
+.pdf td.n,.pdf th.n{text-align:right;white-space:nowrap;}
+.pdf .tot td{font-weight:800;border-top:2px solid var(--marino);}
+.pdf .box{background:#F3F6F9;border-radius:6px;padding:8px;margin-top:8px;font-size:11.5px;}
+/* Panel dev */
+.dev{position:absolute;right:8px;top:72px;z-index:50;background:rgba(10,37,64,.92);color:#fff;font-size:11px;padding:6px 8px;border-radius:8px;display:none;gap:6px;align-items:center;flex-wrap:wrap;max-width:94%;}
+.dev.show{display:flex;}
+.dev select{font-size:11px;max-width:150px;}
+.dev .err{color:#ff8a80;}
+.lic{margin-top:14px;font-size:11.5px;line-height:1.45;color:var(--muted);max-width:400px}
+.lic a{color:inherit}
+@media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important;} }
+
+</style>
+</head>
+<body>
+<div class="phone" id="phone">
+  <div class="header">
+    <span class="back" aria-hidden="true">‹</span>
+    <div class="avatar" id="hAvatar"></div>
+    <div class="h-info"><div class="h-name" id="hName"></div><div class="h-status" id="hStatus"></div></div>
+    <span class="chip" id="hChip"></span>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="chat" id="chat" aria-live="polite"></div>
+  <div class="tray" id="tray"></div>
+  <div class="toast" id="toast" aria-live="polite"></div>
+  <div class="dev" id="dev">DEV · nodo: <b id="devNode">—</b> <select id="jump" aria-label="Saltar a nodo"></select> <span id="devVal"></span></div>
+
+  <div class="screen" id="startScreen">
+    <img class="logo" id="sLogo" alt="TORNILLÖN · Muebles y hogar fácil">
+    <h1>¿Quién monta a quién?</h1>
+    <div class="sub">Juego 1 · Tú eres el CLIENTE</div>
+    <div class="card"><h3>🛋️ Tu misión</h3>Te acabas de independizar y empiezas a trabajar como autónomo/a desde casa. Vas a comprar los muebles de tu despacho a <b>TORNILLÖN</b> por WhatsApp, hablando con Lucía, del Departamento Comercial.
+<ul><li>Elige tus respuestas tocando los botones.</li><li>Practica ser un <b>cliente informado</b>: pregunta, compara, pide presupuesto y factura, reclama bien...</li><li>¡Y cuidado con tus datos! No todo lo que dice «TORNILLÖN» es de TORNILLÖN 🎣</li><li>Toca las imágenes y los PDF para verlos en grande.</li></ul></div>
+    <label class="field">Tu nombre (opcional, sale en el resultado)
+      <input id="alumno" autocomplete="off" maxlength="40" placeholder="Nombre y apellidos">
+    </label>
+    <button class="btn" id="playBtn">Empezar ▶</button>
+    <div class="meta">⏱️ 10-15 min · 13 decisiones · 4 finales</div>
+    <div class="meta" id="sFound"></div>
+    <p class="lic"><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es">© 2026 Gabriel Vidal · Licencia CC BY-NC-ND 4.0 · Uso educativo, sin fines comerciales</a></p>
+  </div>
+  <div class="screen" id="result" hidden></div>
+  <div class="modal" id="modal" hidden role="dialog" aria-modal="true">
+    <div class="mbar"><span id="mTitle"></span><button id="mClose">Cerrar ✕</button></div>
+    <div class="mbody" id="mBody"></div>
+  </div>
+</div>
+<script>
+// =========================================================================
+//  DATOS DE LA EMPRESA FICTICIA (EDITABLES POR EL PROFESOR)
+//  Todo lo que aparece en los chats (precios, plazos, condiciones...) sale
+//  de aquí. Si cambias un precio, los mensajes, presupuestos y facturas se
+//  recalculan solos. Precios en euros con IVA (21 %) incluido.
+// =========================================================================
+const EMPRESA = {
+  nombre: "TORNILLÖN",
+  razonSocial: "TORNILLÖN Muebles y Hogar Fácil, S.L.",
+  cif: "B-46123457",                       // ficticio
+  direccion: "C/ de la Llave Allen, 12 · Polígono Industrial de Silla · 46460 Silla (Valencia)",
+  whatsapp: "+34 961 000 312",              // número oficial (ficticio) con insignia de cuenta verificada
+  web: "www.tornillon.es",                  // dominio ficticio
+  email: "hola@tornillon.es",
+  horario: "L-V de 9:00 a 19:00 · S de 10:00 a 14:00",
+  lema: "Que no te falte ni TORNILLÖN ni tornillos",
+  iva: 21,
+
+  envio: {
+    estandarPrecio: 29,        // € envío a domicilio estándar (península)
+    estandarPlazo: "5-7 días laborables",
+    gratisDesde: 300,          // € de productos (antes de descuentos) para envío estándar gratis
+    expresPrecio: 49,          // € envío exprés
+    expresPlazo: "48 h laborables",
+    recogida: "Recogida gratis en la nave de Silla (pedido listo en 24 h)",
+  },
+  montaje: {
+    porcentaje: 10,            // % sobre el importe de los muebles
+    minimo: 39,                // € mínimo
+    nota: "Opcional. Lo monta un técnico de TORNILLÖN el mismo día de la entrega.",
+  },
+  devoluciones: {
+    dias: 30,                  // días naturales desde la entrega
+    condicion: "producto SIN MONTAR y en su embalaje original",
+    montado: "Un mueble ya montado solo se devuelve si tiene un defecto o le falta una pieza que no podamos reponer.",
+    reembolso: "Por el mismo medio de pago, en un máximo de 14 días.",
+    recogidaPrecio: 15,        // € si pasamos a recogerlo a domicilio (gratis si lo traes a la nave)
+  },
+  garantia: {
+    anos: 3,                   // garantía legal en España para bienes nuevos
+    extra: "Herrajes y bisagras: 10 años de garantía TORNILLÖN.",
+  },
+  piezas: {
+    plazoReclamar: 15,         // días para avisar de una pieza que falta o llega dañada
+    plazoEnvio: "48-72 h",
+    coste: "Gratis",
+    necesitamos: ["nº de pedido", "foto del problema", "referencia de la pieza (está en el manual)"],
+  },
+  pago: [
+    "Tarjeta en la pasarela segura de la web (enlace https://www.tornillon.es/pago)",
+    "Bizum al número oficial de empresa",
+    "Transferencia bancaria (empresas)",
+    "Efectivo o tarjeta en la nave de Silla",
+  ],
+  avisoSeguridad: "TORNILLÖN NUNCA pide datos de tarjeta, CVV, contraseñas ni códigos SMS por WhatsApp, SMS o email.",
+  club: {
+    nombre: "Club TORNILLÖN",
+    precio: 0,
+    descuento: 5,              // % en todas las compras
+    regalo: "una llave Allen ALLENSSON de regalo (la que nunca se pierde... casi)",
+    datos: "nombre, email y código postal",
+  },
+  volumen: [                   // descuento empresas por importe del pedido (IVA incluido). No acumulable con el Club.
+    { desde: 1000, dto: 5 },
+    { desde: 2000, dto: 10 },
+    { desde: 4000, dto: 15 },
+  ],
+  presupuestoValidez: 15,      // días
+};
+
+const CATALOGO = [
+  { ref:"CURRANTE",    nombre:"CURRÄNTE",      tipo:"Escritorio",            precio:129, medidas:"120 × 60 × 75 cm", colores:["blanco","roble claro","negro"], emoji:"🖥️", nota:"Con pasacables y hueco para la regleta." },
+  { ref:"CURRANTEMINI",nombre:"CURRÄNTE MINI", tipo:"Escritorio compacto",   precio:109, medidas:"100 × 55 × 75 cm", colores:["blanco","roble claro"],         emoji:"💻", nota:"Para pisos donde la cocina es también el despacho." },
+  { ref:"SIENTATEN",   nombre:"SIÉNTATEN",     tipo:"Silla de oficina",      precio:89,  medidas:"Asiento 48 cm · altura regulable 44-54 cm", colores:["negro","azul Tornillön"], emoji:"🪑", nota:"Respaldo de malla y ruedas para suelo de parqué." },
+  { ref:"LIBROTEK",    nombre:"LIBRØTEK",      tipo:"Estantería 5 baldas",   precio:79,  medidas:"80 × 30 × 180 cm", colores:["blanco","roble claro"],         emoji:"📚", nota:"Incluye kit antivuelco (úsalo, de verdad)." },
+  { ref:"PERCHASEN",   nombre:"PERCHÄSEN",     tipo:"Armario 2 puertas",     precio:249, medidas:"100 × 58 × 201 cm", colores:["blanco","roble claro"],        emoji:"🚪", nota:"Barra de colgar + 2 baldas. 3 cajas de embalaje." },
+  { ref:"SIESTA",      nombre:"SIËSTA",        tipo:"Cama con 2 cajones",    precio:299, medidas:"150 × 190 cm (colchón no incluido)", colores:["blanco","roble claro"], emoji:"🛏️", nota:"Cajones con ruedas para guardar lo que no cabe en el PERCHÄSEN." },
+  { ref:"RELAJON",     nombre:"RELAJÖN",       tipo:"Sofá modular 3 plazas", precio:449, medidas:"210 × 90 × 85 cm", colores:["gris Llave Allen","azul marino","amarillo tuerca"], emoji:"🛋️", nota:"Fundas lavables a 30 °C." },
+  { ref:"MESON",       nombre:"MESÖN",         tipo:"Mesa de centro",        precio:59,  medidas:"90 × 55 × 45 cm", colores:["roble claro","negro"],           emoji:"☕", nota:"Con revistero, por si alguien aún compra revistas." },
+  { ref:"ALLENSSON",   nombre:"ALLENSSON",     tipo:"Llave Allen de repuesto (kit 5 medidas)", precio:4.95, medidas:"2, 3, 4, 5 y 6 mm", colores:["amarillo tuerca"], emoji:"🔧", nota:"La pieza que nunca sobra." },
+];
+
+// ---- utilidades de datos (no hace falta tocarlas) ----
+const PROD = Object.fromEntries(CATALOGO.map(p => [p.ref, p]));
+const precio = (ref) => PROD[ref].precio;
+const fmtNum = (n, dec) => { const [i, f] = (Math.round(n * 100) / 100).toFixed(dec).split("."); return i.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (f ? "," + f : ""); };
+const eur = (n) => fmtNum(n, Math.round(n * 100) % 100 ? 2 : 0) + " €";
+const eur2 = (n) => fmtNum(n, 2) + " €";
+const envioDe = (total) => total >= EMPRESA.envio.gratisDesde ? 0 : EMPRESA.envio.estandarPrecio;
+const montajeDe = (total) => Math.max(EMPRESA.montaje.minimo, total * EMPRESA.montaje.porcentaje / 100);
+const dtoVolumen = (total) => { let d = 0; EMPRESA.volumen.forEach(v => { if (total >= v.desde) d = v.dto; }); return d; };
+const baseIVA = (total) => total / (1 + EMPRESA.iva / 100);
+
+</script>
+<script>
+// =========================================================================
+//  ATAJOS PARA ESCRIBIR MENSAJES
+//  T("texto")              → mensaje de texto del contacto (admite **negrita**)
+//  ME("texto")             → mensaje que envía el alumno automáticamente
+//  IMG(svg, "pie")         → imagen del contacto   ·  MEIMG(svg,"pie") → imagen del alumno
+//  DOC("nombre.pdf","meta", html) → documento PDF simulado (se abre al tocarlo)
+//  MEDOC(...)              → documento PDF que envía el alumno
+//  AUDIO(seg, "transcripción") → nota de voz simulada con transcripción visible
+//  NOTE("texto")           → aviso centrado del sistema · DAY("Hoy","10:30") separador de día
+//  ACT("texto", seg)       → acción con espera corta y barra
+//  CHAT("clave")           → cambia de conversación (clave en STORY.contacts)
+// =========================================================================
+const T     = (text)                 => ({ type:"text", text });
+const ME    = (text)                 => ({ type:"text", text, out:true });
+const IMG   = (svg, caption="")      => ({ type:"image", svg, caption });
+const MEIMG = (svg, caption="")      => ({ type:"image", svg, caption, out:true });
+const DOC   = (name, meta, html, caption="") => ({ type:"doc", name, meta, html, caption });
+const MEDOC = (name, meta, html, caption="") => ({ type:"doc", name, meta, html, caption, out:true });
+const AUDIO = (seconds, transcript)  => ({ type:"audio", seconds, transcript });
+const MEAUDIO = (seconds, transcript) => ({ type:"audio", seconds, transcript, out:true });
+const NOTE  = (text, cls="")         => ({ type:"note", text, cls });
+const DAY   = (label, clock)         => ({ type:"day", label, clock });
+const ACT   = (text, wait=2)         => ({ type:"action", text, wait });
+const CHAT  = (key)                  => ({ type:"chat", key });
+
+// =========================================================================
+//  IMÁGENES SVG (se generan con los datos del catálogo)
+// =========================================================================
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+const C = { azul:"#004B93", amarillo:"#FFD100", marino:"#0A2540", gris:"#E0E6ED", blanco:"#FFFFFF" };
+
+function icono(tipo, x, y, s=1){
+  const g = (d) => `<g transform="translate(${x},${y}) scale(${s})" fill="none" stroke="${C.azul}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">${d}</g>`;
+  const t = tipo.toLowerCase();
+  if (t.includes("escritorio")) return g(`<rect x="4" y="14" width="52" height="6" fill="${C.amarillo}"/><path d="M8 20v24M52 20v24M36 20v14h16"/><rect x="20" y="2" width="18" height="12"/>`);
+  if (t.includes("silla"))      return g(`<rect x="18" y="2" width="22" height="20" rx="4" fill="${C.amarillo}"/><path d="M14 26h30M29 22v4M29 26v10M18 44l11-8 11 8M18 44h0M40 44h0"/>`);
+  if (t.includes("estant"))     return g(`<rect x="12" y="0" width="34" height="46"/><path d="M12 11h34M12 22h34M12 33h34"/><rect x="16" y="3" width="4" height="8" fill="${C.amarillo}"/><rect x="22" y="14" width="4" height="8" fill="${C.amarillo}"/>`);
+  if (t.includes("armario"))    return g(`<rect x="10" y="0" width="40" height="46" fill="${C.amarillo}" fill-opacity=".35"/><path d="M30 0v46M26 20v6M34 20v6"/>`);
+  if (t.includes("cama"))       return g(`<path d="M4 18v26M56 26v18M4 34h52M4 26h52v8"/><rect x="8" y="20" width="12" height="6" rx="2" fill="${C.amarillo}"/><path d="M10 38h18M34 38h18"/>`);
+  if (t.includes("sof"))        return g(`<path d="M8 22v-8h44v8"/><rect x="4" y="22" width="52" height="14" rx="4" fill="${C.amarillo}"/><path d="M8 36v8M52 36v8"/>`);
+  if (t.includes("mesa"))       return g(`<rect x="4" y="16" width="52" height="6" fill="${C.amarillo}"/><path d="M10 22v20M50 22v20M10 32h40"/>`);
+  return g(`<path d="M14 40l18-18" stroke-width="5"/><path d="M32 22V6h12" stroke-width="5" stroke="${C.amarillo}"/>`);
+}
+
+function svgCatalogo(refs, titulo="Catálogo TORNILLÖN"){
+  const items = refs.map(r => PROD[r]);
+  const cols = 2, w = 360, cw = 168, ch = 112, top = 52;
+  const rows = Math.ceil(items.length / cols), h = top + rows * (ch + 8) + 26;
+  let s = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" font-family="Arial,Helvetica,sans-serif"><rect width="${w}" height="${h}" fill="${C.gris}"/>
+  <rect width="${w}" height="44" fill="${C.azul}"/><text x="14" y="28" fill="#fff" font-size="16" font-weight="700">${esc(titulo)}</text><rect x="${w-74}" y="12" width="62" height="20" rx="10" fill="${C.amarillo}"/><text x="${w-43}" y="26" font-size="11" text-anchor="middle" font-weight="700" fill="${C.marino}">IVA incl.</text>`;
+  items.forEach((p, i) => {
+    const x = 8 + (i % cols) * (cw + 8), y = top + Math.floor(i / cols) * (ch + 8);
+    s += `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="10" fill="#fff"/>` + icono(p.tipo, x + 54, y + 8, 1);
+    s += `<text x="${x+10}" y="${y+72}" font-size="14" font-weight="800" fill="${C.marino}">${esc(p.nombre)}</text>`;
+    s += `<text x="${x+10}" y="${y+87}" font-size="10" fill="#5b6b7f">${esc(p.tipo)} · ${esc(p.medidas.split("(")[0].slice(0,24))}</text>`;
+    s += `<rect x="${x+10}" y="${y+92}" width="70" height="16" rx="8" fill="${C.amarillo}"/><text x="${x+45}" y="${y+104}" font-size="11.5" font-weight="800" text-anchor="middle" fill="${C.marino}">${esc(eur(p.precio))}</text>`;
+  });
+  s += `<text x="${w/2}" y="${h-9}" font-size="10" text-anchor="middle" fill="#5b6b7f">Envío gratis desde ${EMPRESA.envio.gratisDesde} € · Devolución ${EMPRESA.devoluciones.dias} días · Garantía ${EMPRESA.garantia.anos} años</text></svg>`;
+  return s;
+}
+
+function svgPlano(hueco){
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" font-family="Comic Sans MS,Chalkboard,Arial"><rect width="360" height="240" fill="#FBF8EE"/>
+  <g stroke="#cfd8e3" stroke-width="1">${Array.from({length:18},(_,i)=>`<line x1="0" y1="${i*14}" x2="360" y2="${i*14}"/>`).join("")}</g>
+  <path d="M40 40h280v160H40z" fill="none" stroke="${C.marino}" stroke-width="4"/>
+  <rect x="100" y="40" width="160" height="40" fill="${C.amarillo}" fill-opacity=".35" stroke="${C.azul}" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="180" y="66" text-anchor="middle" font-size="14" fill="${C.azul}">hueco escritorio</text>
+  <path d="M100 100h160M100 94v12M260 94v12" stroke="#d32f2f" stroke-width="2.5"/><text x="180" y="124" text-anchor="middle" font-size="22" font-weight="700" fill="#d32f2f">${hueco} cm</text>
+  <rect x="40" y="150" width="50" height="50" fill="none" stroke="${C.marino}" stroke-width="2"/><text x="65" y="180" text-anchor="middle" font-size="11">puerta</text>
+  <rect x="270" y="40" width="50" height="12" fill="#8ecae6"/><text x="295" y="68" text-anchor="middle" font-size="11">ventana</text>
+  <text x="180" y="226" text-anchor="middle" font-size="13" fill="${C.marino}">Mi cuarto · medido con el metro de mi abuelo</text></svg>`;
+}
+
+function svgManual(prod, pieza, cantidad, llegan){
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" font-family="Arial,Helvetica,sans-serif"><rect width="360" height="260" fill="#fff"/>
+  <rect x="0" y="0" width="360" height="34" fill="${C.gris}"/><text x="12" y="23" font-size="15" font-weight="800" fill="${C.marino}">${esc(prod)} · Manual de montaje · paso 7/12</text>
+  <g stroke="${C.marino}" stroke-width="2.5" fill="none"><circle cx="70" cy="90" r="16"/><path d="M70 106v50M70 120l-24 18M70 120l26 6M70 156l-18 34M70 156l18 34"/><path d="M58 86h0M82 86h0" stroke-width="4"/><path d="M62 98q8-6 16 0"/></g>
+  <text x="104" y="84" font-size="40" font-weight="800" fill="#d32f2f">?</text>
+  <rect x="150" y="56" width="190" height="120" rx="8" fill="${C.gris}"/>
+  <text x="245" y="80" text-anchor="middle" font-size="13" fill="${C.marino}">Bolsa de herrajes</text>
+  ${Array.from({length:cantidad},(_,i)=>{const x=172+i*38;const ok=i<llegan;return `<g transform="translate(${x},96)">${ok?`<rect x="6" y="0" width="12" height="6" fill="${C.azul}"/><rect x="9" y="6" width="6" height="34" fill="${C.azul}"/><path d="M9 14l6 3M9 22l6 3M9 30l6 3" stroke="#fff"/>`:`<rect x="0" y="0" width="24" height="42" rx="4" fill="none" stroke="#d32f2f" stroke-width="2" stroke-dasharray="4 3"/><text x="12" y="27" text-anchor="middle" font-size="16" fill="#d32f2f" font-weight="800">✕</text>`}</g>`}).join("")}
+  <text x="245" y="160" text-anchor="middle" font-size="14" font-weight="800" fill="${C.marino}">${esc(pieza)} × ${cantidad}  (llegan ${llegan})</text>
+  <rect x="20" y="198" width="320" height="46" rx="8" fill="#FFF4C2"/><text x="180" y="217" text-anchor="middle" font-size="12" fill="${C.marino}">¿Te falta una pieza? Escríbenos con nº de pedido, foto</text><text x="180" y="234" text-anchor="middle" font-size="12" fill="${C.marino}">y referencia: ${EMPRESA.whatsapp} · te la enviamos ${EMPRESA.piezas.coste.toLowerCase()}</text></svg>`;
+}
+
+function svgTicket(numero, refs, extra=[]){
+  let total = 0, y = 84, rows = "";
+  refs.forEach(r => { total += precio(r); rows += `<text x="20" y="${y}" font-size="12.5">1 × ${esc(PROD[r].nombre)}</text><text x="250" y="${y}" font-size="12.5" text-anchor="end">${esc(eur2(precio(r)))}</text>`; y += 20; });
+  extra.forEach(([t, v]) => { total += v; rows += `<text x="20" y="${y}" font-size="12.5">${esc(t)}</text><text x="250" y="${y}" font-size="12.5" text-anchor="end">${esc(eur2(v))}</text>`; y += 20; });
+  const h = y + 70;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 ${h}" font-family="Courier New,monospace" fill="${C.marino}"><rect width="270" height="${h}" fill="#fff"/>
+  <rect width="270" height="8" fill="${C.amarillo}"/><text x="135" y="32" text-anchor="middle" font-size="16" font-weight="700" font-family="Arial">TORNILLÖN</text>
+  <text x="135" y="50" text-anchor="middle" font-size="11">PEDIDO CONFIRMADO</text><text x="135" y="66" text-anchor="middle" font-size="12" font-weight="700">Nº ${esc(numero)}</text>${rows}
+  <line x1="20" y1="${y-8}" x2="250" y2="${y-8}" stroke="${C.marino}" stroke-dasharray="3 3"/>
+  <text x="20" y="${y+10}" font-size="14" font-weight="700">TOTAL (IVA incl.)</text><text x="250" y="${y+10}" font-size="14" font-weight="700" text-anchor="end">${esc(eur2(total))}</text>
+  <text x="135" y="${y+34}" text-anchor="middle" font-size="10">Guarda este nº para cualquier gestión</text><text x="135" y="${y+50}" text-anchor="middle" font-size="10">Gracias por montártelo con nosotros</text></svg>`;
+}
+
+function svgPhishing(){
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230" font-family="Arial,Helvetica,sans-serif"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff3d00"/><stop offset="1" stop-color="#ffb300"/></linearGradient></defs>
+  <rect width="360" height="230" fill="url(#g)"/><text x="180" y="40" text-anchor="middle" font-size="26" font-weight="900" fill="#fff">TORNlLLON</text>
+  <text x="180" y="60" text-anchor="middle" font-size="12" fill="#fff">Muebles y Hogar Fasil</text>
+  <rect x="30" y="76" width="300" height="96" rx="12" fill="#fff"/><text x="180" y="104" text-anchor="middle" font-size="17" font-weight="800" fill="#c62828">¡¡PAQUETE RETENIDO!!</text>
+  <text x="180" y="128" text-anchor="middle" font-size="13" fill="#222">Paga 1,99 € de "tasas" en 2 HORAS</text><text x="180" y="148" text-anchor="middle" font-size="13" fill="#222">o tu pedido sera DESTRUIDO 😱</text>
+  <text x="180" y="166" text-anchor="middle" font-size="11" fill="#888">+ sorteo de un sofá RELAJÖN gratis 🎁</text>
+  <rect x="80" y="184" width="200" height="32" rx="16" fill="#2e7d32"/><text x="180" y="205" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">PAGAR AHORA ➜</text></svg>`;
+}
+
+function svgWebFalsa(){
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Arial,Helvetica,sans-serif"><rect width="360" height="300" fill="#f5f5f5"/>
+  <rect width="360" height="36" fill="#e0e0e0"/><rect x="10" y="8" width="340" height="20" rx="10" fill="#fff"/><text x="22" y="22" font-size="11.5" fill="#c62828">⚠ No seguro | http://tornil1on-envios.top/pago-tasas</text>
+  <text x="180" y="66" text-anchor="middle" font-size="20" font-weight="900" fill="#ff6d00">TORNlLLON Envios</text>
+  ${[["Nº de tarjeta","4532 •••• •••• ••••"],["Caducidad","MM/AA"],["CVV (3 cifras de detrás)","•••"],["Código que te llegue por SMS","______"]].map(([l,v],i)=>`<text x="30" y="${96+i*46}" font-size="11.5" fill="#444">${l}</text><rect x="30" y="${102+i*46}" width="300" height="26" rx="5" fill="#fff" stroke="#bbb"/><text x="40" y="${120+i*46}" font-size="12" fill="#999">${v}</text>`).join("")}
+  <rect x="30" y="278" width="300" height="0" fill="#000"/><text x="180" y="292" text-anchor="middle" font-size="11" fill="#c62828">Quedan 01:59:12 antes de destruir tu paquete</text></svg>`;
+}
+
+function svgFoto(texto1, texto2){
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" font-family="Arial,Helvetica,sans-serif"><rect width="360" height="220" fill="#c9b79c"/>
+  <rect x="40" y="40" width="280" height="130" fill="#d9c7a7" stroke="#a48b66" stroke-width="3"/><path d="M40 40l140 40 140-40" fill="none" stroke="#a48b66" stroke-width="3"/>
+  <rect x="200" y="100" width="90" height="40" fill="#fff"/><text x="245" y="116" font-size="10" text-anchor="middle" fill="${C.marino}">TORNILLÖN</text><text x="245" y="130" font-size="9" text-anchor="middle" fill="${C.marino}">${esc(texto2)}</text>
+  <path d="M70 120l30 18-20 6 24 12" fill="none" stroke="#5d4037" stroke-width="4"/><circle cx="96" cy="138" r="18" fill="none" stroke="#d32f2f" stroke-width="4"/>
+  <text x="180" y="205" text-anchor="middle" font-size="13" fill="#3e2723" font-weight="700">${esc(texto1)}</text></svg>`;
+}
+
+function svgBusiness(){
+  const it = [["🗂️","Catálogo","Productos con foto, precio y referencia"],["⚡","Respuestas rápidas","/hola  /envio  /devolucion  /pieza"],["🏷️","Etiquetas","Nuevo cliente · Presupuesto · Reclamación · Pedido · Pagado"],["👋","Mensaje de bienvenida y ausencia","Horario: "+EMPRESA.horario]];
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270" font-family="Arial,Helvetica,sans-serif"><rect width="360" height="270" fill="#fff"/>
+  <rect width="360" height="40" fill="${C.azul}"/><text x="14" y="26" font-size="15" font-weight="700" fill="#fff">Herramientas para la empresa</text>
+  ${it.map(([e,t,d],i)=>`<g transform="translate(0,${48+i*54})"><circle cx="30" cy="22" r="17" fill="${C.gris}"/><text x="30" y="28" font-size="16" text-anchor="middle">${e}</text><text x="58" y="18" font-size="14" font-weight="700" fill="${C.marino}">${esc(t)}</text><text x="58" y="36" font-size="10.5" fill="#5b6b7f">${esc(d)}</text><line x1="58" y1="50" x2="350" y2="50" stroke="${C.gris}"/></g>`).join("")}</svg>`;
+}
+
+// =========================================================================
+//  DOCUMENTOS PDF SIMULADOS (presupuesto, proforma, factura)
+//  lineas: [{ref, uds}] · opt: {tipo, numero, cliente, nif, direccion, dto, envio, montaje}
+// =========================================================================
+function docComercial(lineas, opt){
+  let sub = 0, rows = "";
+  lineas.forEach(l => { const p = PROD[l.ref], imp = p.precio * l.uds; sub += imp;
+    rows += `<tr><td>${esc(p.nombre)}<br><small>${esc(p.tipo)} · ${esc(p.medidas)}${l.color ? " · " + esc(l.color) : ""}</small></td><td class="n">${l.uds}</td><td class="n">${eur2(p.precio)}</td><td class="n">${eur2(imp)}</td></tr>`; });
+  let total = sub;
+  if (opt.dto) { const d = sub * opt.dto / 100; total -= d; rows += `<tr><td colspan="3">Descuento ${esc(opt.dtoTxt || opt.dto + " %")}</td><td class="n">−${eur2(d)}</td></tr>`; }
+  if (opt.montaje) { const m = montajeDe(sub); total += m; rows += `<tr><td colspan="3">Montaje a domicilio (${EMPRESA.montaje.porcentaje} %, mín. ${EMPRESA.montaje.minimo} €)</td><td class="n">${eur2(m)}</td></tr>`; }
+  const env = opt.envio === undefined ? envioDe(sub) : opt.envio;
+  rows += `<tr><td colspan="3">Envío ${opt.envioTxt || "estándar (" + EMPRESA.envio.estandarPlazo + ")"}</td><td class="n">${env ? eur2(env) : "GRATIS"}</td></tr>`;
+  total += env;
+  const base = baseIVA(total);
+  const ident = opt.tipo === "FACTURA" ? `<div class="box"><b>Datos del cliente</b><br>${esc(opt.cliente||"")}<br>NIF/CIF: ${esc(opt.nif||"—")}<br>${esc(opt.direccion||"")}</div>` : `<div class="box"><b>Para:</b> ${esc(opt.cliente||"")}${opt.nif ? " · " + esc(opt.nif) : ""}</div>`;
+  return `<div class="pdf"><div class="ph"><img src="{{LOGO_H}}" alt="TORNILLÖN"><div class="r">${esc(EMPRESA.razonSocial)}<br>CIF ${esc(EMPRESA.cif)}<br>${esc(EMPRESA.direccion)}</div></div>
+  <h2>${esc(opt.tipo)} Nº ${esc(opt.numero)}</h2>${ident}
+  <table><tr><th>Concepto</th><th class="n">Uds.</th><th class="n">Precio</th><th class="n">Importe</th></tr>${rows}
+  <tr><td colspan="3">Base imponible</td><td class="n">${eur2(base)}</td></tr><tr><td colspan="3">IVA ${EMPRESA.iva} %</td><td class="n">${eur2(total - base)}</td></tr>
+  <tr class="tot"><td colspan="3">TOTAL</td><td class="n">${eur2(total)}</td></tr></table>
+  <div class="box">${opt.tipo === "PRESUPUESTO" || opt.tipo === "FACTURA PROFORMA" ? `Validez: ${EMPRESA.presupuestoValidez} días. ` : ""}Devoluciones: ${EMPRESA.devoluciones.dias} días, ${esc(EMPRESA.devoluciones.condicion)}. Garantía legal ${EMPRESA.garantia.anos} años. ${esc(EMPRESA.avisoSeguridad)}</div></div>`;
+}
+function totalDe(lineas, opt={}){
+  let sub = 0; lineas.forEach(l => sub += precio(l.ref) * l.uds);
+  let t = sub - (opt.dto ? sub * opt.dto / 100 : 0);
+  if (opt.montaje) t += montajeDe(sub);
+  return t + (opt.envio === undefined ? envioDe(sub) : opt.envio);
+}
+
+</script>
+<script>
+// =========================================================================
+//  HISTORIA · JUEGO 1: «ERES EL CLIENTE»
+//  Cada nodo: { step, ask, topic, comp:[competencias], messages:[...], choices:[...] }
+//  Cada opción: { label, say?, q (2 acierto · 1 mejorable · 0 error), fb (explicación), reply?, flag?, next }
+//  Nodos especiales: { route:[{flag, next}], next }  ·  { end:"CLAVE" | "auto" }
+// =========================================================================
+const PEDIDO_CLIENTE = "TRN-2026-04817";
+const lineasCliente = (s) => {
+  const l = [{ ref: s.flags.has("sinMedir") ? "CURRANTE" : "CURRANTEMINI", uds:1, color:"roble claro" }, { ref:"SIENTATEN", uds:1, color:"negro" }, { ref:"LIBROTEK", uds:1, color:"blanco" }];
+  if (s.flags.has("llave")) l.push({ ref:"ALLENSSON", uds:1 });
+  return l;
+};
+const optsCliente = (s, extra={}) => Object.assign({ cliente:"Cliente particular", dto: s.flags.has("club") ? EMPRESA.club.descuento : 0, dtoTxt:`${EMPRESA.club.nombre} ${EMPRESA.club.descuento} %` }, extra);
+const subCliente = (s) => lineasCliente(s).reduce((a, l) => a + precio(l.ref) * l.uds, 0);
+const DATOS_FISCALES = { cliente:"Alex Navarro Pons (autónomo/a · diseño gráfico)", nif:"12345678Z", direccion:"C/ de la Regleta, 7, 3º B · 46020 Valencia" };
+
+const STORY = {
+  id: "cliente",
+  title: "Juego del cliente",
+  subtitle: "Digitalización Aplicada al Sistema Productivo · 2º Gestión Administrativa",
+  defaultName: "Alex",
+  start: "n01",
+  steps: 13,
+  clockStart: 10*60 + 5,
+  firstContact: "lucia",
+  comps: { info:"Información", der:"Derechos y condiciones", adm:"Gestión administrativa", seg:"Seguridad digital" },
+  contacts: {
+    lucia:  { name:"TORNILLÖN · Lucía", avatar:"logo", verified:true, status:"Cuenta de empresa · en línea", preview:"Lucía te ha respondido" },
+    estafa: { name:"+34 631 90 04 61", avatar:"?", color:"#9e9e9e", status:"Número desconocido", preview:"TORNILLÖN Envíos 📦: Su pedido está RETENIDO...",
+              intro:"⚠️ Este número **no está en tus contactos** y **no es una cuenta de empresa verificada**." },
+  },
+
+  nodes: {
+    n01: { step:1, topic:"Primer contacto", ask:"¿Cómo empiezas la conversación?", comp:["info"],
+      messages:[
+        DAY("Lunes", "10:05"),
+        NOTE("Te acabas de independizar y empiezas a trabajar como **diseñador/a gráfico/a autónomo/a**. Necesitas montar tu despacho en casa. Escribes al WhatsApp oficial de TORNILLÖN (el que sale en su web)."),
+        T("¡Hola! 👋 Soy Lucía, del Departamento Comercial de TORNILLÖN. ¿En qué te puedo ayudar? Prometo no dejarte sin llave Allen 🔧"),
+      ],
+      choices:[
+        { label:"Hola, Lucía. Estoy montando un despacho en casa: necesito escritorio, silla y una estantería. ¿Qué me recomiendas?", q:2, next:"n02",
+          fb:"Explicar qué necesitas y para qué ahorra tiempo y te da recomendaciones útiles." },
+        { label:"hola. precios", q:0, next:"n02",
+          reply:[ "¡Hola! 😅 Precios tenemos muchos... ¿qué estás buscando?", ME("Perdona: escritorio, silla y estantería para trabajar en casa.") ],
+          fb:"Un mensaje sin contexto obliga a repetir preguntas. Un cliente informado explica qué necesita." },
+        { label:"Buenas, ¿me mandas el catálogo entero y ya miro yo?", q:1, next:"n02",
+          reply:[ "¡Claro! Aunque son 200 páginas 😅 ¿Qué buscas? Así te mando solo lo que te sirve.", ME("Escritorio, silla y estantería para teletrabajar.") ],
+          fb:"Válido, pero contar tu necesidad te ahorra rebuscar entre cientos de productos." },
+      ]},
+
+    n02: { step:2, topic:"Comprobar medidas", ask:"Te encanta el CURRÄNTE. ¿Qué haces?", comp:["info"],
+      messages:[
+        T("¡Genial! Para teletrabajar esto es lo que más se lleva 👇"),
+        IMG(svgCatalogo(["CURRANTE","CURRANTEMINI","SIENTATEN","LIBROTEK"], "Selección «Despacho en casa»"), "Precios con IVA incluido"),
+        T(`El **CURRÄNTE** es nuestro superventas: ${PROD.CURRANTE.medidas}, ${eur(precio("CURRANTE"))}. ¡Cabe hasta el gato encima!`),
+      ],
+      choices:[
+        { label:"Antes de decidir: tengo un hueco de 110 cm, te paso el plano. ¿Me cabe?", q:2, next:"n03",
+          say: MEIMG(svgPlano(110), "Este es el hueco que tengo 📏 ¿Me cabe el CURRÄNTE?"),
+          reply:[ `Bien visto 👀 El CURRÄNTE mide 120 cm: ¡no te cabría! Te recomiendo el **CURRÄNTE MINI**: ${PROD.CURRANTEMINI.medidas}, ${eur(precio("CURRANTEMINI"))}. Te sobran 10 cm para la papelera.`, ME("¡Perfecto, el MINI entonces!") ],
+          fb:"Comprobar medidas con la ficha técnica antes de comprar evita la devolución más típica: «no me cabe»." },
+        { label:"¡Me lo quedo! Seguro que cabe, a ojo son como 120 cm.", q:0, next:"n03", flag:"sinMedir",
+          reply:[ "¡Apuntado el CURRÄNTE de 120 cm! 👍" ],
+          fb:"Comprar «a ojo» es la primera causa de devoluciones. Mide el hueco y compáralo con la ficha del producto." },
+        { label:"¿Cuál es el más barato? Lo demás me da igual.", q:1, next:"n03",
+          reply:[ `El más económico es el **CURRÄNTE MINI**, ${eur(precio("CURRANTEMINI"))}. Mide 100 cm de ancho, ¿te cabe?`, ME("Uy, sí, justo tengo 110 cm. Ese."), "¡Suerte que lo has preguntado! 😉" ],
+          fb:"El precio importa, pero también las medidas y el uso. Esta vez has tenido suerte." },
+      ]},
+
+    n03: { step:3, topic:"Elegir la silla", ask:"Vas a pasar 8 horas al día sentado/a. ¿Qué preguntas?", comp:["info","der"],
+      messages:[
+        T(`Para la silla te recomiendo la **SIÉNTATEN**: ${eur(precio("SIENTATEN"))}, ${PROD.SIENTATEN.medidas}. Colores: ${PROD.SIENTATEN.colores.join(" o ")}.`),
+      ],
+      choices:[
+        { label:"¿Es regulable? ¿Y qué garantía tiene si se rompe el pistón al mes?", q:2, next:"n04",
+          reply:[ `Altura regulable y respaldo de malla. Tiene **${EMPRESA.garantia.anos} años de garantía legal** y ${EMPRESA.garantia.extra.toLowerCase()} Si se rompe, guarda la factura y nos escribes 😊`, ME("Perfecto, la SIÉNTATEN negra.") ],
+          fb:`Preguntar por la garantía es clave: en España los productos nuevos tienen ${EMPRESA.garantia.anos} años de garantía legal.` },
+        { label:"¿La tenéis en amarillo fosforito con luces LED?", q:1, next:"n04",
+          reply:[ "Solo en negro o azul Tornillön 😄 Las luces LED las pones tú. ¿Te va la negra?", ME("Vale, negra.") ],
+          fb:"Elegir solo por estética está bien... pero pregunta también por ergonomía y garantía." },
+        { label:"Ponme la que sea, total es una silla.", q:0, next:"n04",
+          reply:[ "¡Te apunto la SIÉNTATEN negra! Tu espalda me lo agradecerá 😉" ],
+          fb:"Una silla de trabajo afecta a tu salud. Pide información: regulación, medidas, garantía." },
+      ]},
+
+    n04: { step:4, topic:"Pedir presupuesto", ask:"¿Cómo quieres saber el precio final?", comp:["adm","der"],
+      messages:[
+        T("¿Te preparo el pedido con escritorio + silla + estantería LIBRØTEK?"),
+      ],
+      choices:[
+        { label:"Sí, pero antes pásame un **presupuesto por escrito** con IVA y envío incluidos.", q:2, next:"n05",
+          reply:[ (s) => DOC("Presupuesto_P-2026-0287.pdf", "1 página · PDF · 79 kB", docComercial(lineasCliente(s), { tipo:"PRESUPUESTO", numero:"P-2026-0287", cliente:"Cliente particular" }), `Ahí lo tienes. Válido ${EMPRESA.presupuestoValidez} días 📄`) ],
+          fb:"Un presupuesto escrito te protege: precio cerrado, IVA, envío y validez. Si algo no cuadra luego, puedes reclamarlo." },
+        { label:"Dime más o menos lo que es y ya está.", q:1, next:"n05",
+          reply:[ "Unos 300 € y pico. Igualmente te mando el presupuesto, que en TORNILLÖN somos así de claros 😉", (s) => DOC("Presupuesto_P-2026-0287.pdf", "1 página · PDF · 79 kB", docComercial(lineasCliente(s), { tipo:"PRESUPUESTO", numero:"P-2026-0287", cliente:"Cliente particular" })) ],
+          fb:"Un «más o menos» no sirve como prueba. Pide siempre el precio por escrito." },
+        { label:"No hace falta, confío en ti.", q:0, next:"n05",
+          reply:[ "¡Gracias! Aun así te lo mando, que el papel no se desmonta 😉", (s) => DOC("Presupuesto_P-2026-0287.pdf", "1 página · PDF · 79 kB", docComercial(lineasCliente(s), { tipo:"PRESUPUESTO", numero:"P-2026-0287", cliente:"Cliente particular" })) ],
+          fb:"Sin presupuesto no sabes exactamente qué vas a pagar ni tienes con qué reclamar." },
+      ]},
+
+    n05: { step:5, topic:"Condiciones de compra", ask:"Antes de pagar, ¿qué preguntas?", comp:["der"],
+      messages:[
+        (s) => T(subCliente(s) >= EMPRESA.envio.gratisDesde ? "Como pasas de 300 €, ¡el envío es gratis! 🎉" : `Un detalle: el envío cuesta ${eur(EMPRESA.envio.estandarPrecio)} porque no llegas a ${EMPRESA.envio.gratisDesde} € (te faltan ${eur(EMPRESA.envio.gratisDesde - subCliente(s))}).`),
+      ],
+      choices:[
+        { label:"¿Cuánto tarda en llegar, qué pasa si quiero devolverlo y el montaje está incluido?", q:2, next:"n06",
+          reply:[ `Te cuento 👇\n🚚 Envío estándar: ${EMPRESA.envio.estandarPlazo}.\n↩️ Devolución: ${EMPRESA.devoluciones.dias} días, ${EMPRESA.devoluciones.condicion}.\n🔧 Montaje a domicilio opcional: ${EMPRESA.montaje.porcentaje} % (mínimo ${EMPRESA.montaje.minimo} €).\n¡O lo montas tú, que para eso somos TORNILLÖN!`, ME("Lo monto yo, que me apetece el reto 💪") ],
+          fb:"Plazos, devoluciones y servicios extra: lee las condiciones ANTES de pagar, no cuando hay un problema." },
+        { label:"¿Hay alguna forma de no pagar el envío?", q:1, next:"n06",
+          reply:[ (s) => s.flags.has("sinMedir")
+                    ? T(`¡Sí! Te faltan solo 3 €: si añades la llave **ALLENSSON** (${eur(precio("ALLENSSON"))}) superas los ${EMPRESA.envio.gratisDesde} € y el envío es gratis 🎉 ¿Te la añado?`)
+                    : T(`Puedes recogerlo gratis en nuestra nave de Silla (listo en 24 h), o llegar a ${EMPRESA.envio.gratisDesde} € de compra.`),
+                  (s) => s.flags.has("sinMedir") ? ME("¡Añádela! Nunca sobra una llave Allen.") : ME("No tengo coche... mejor envío. Vale."),
+                  (s) => { if (s.flags.has("sinMedir")) s.flags.add("llave"); return null; } ],
+          fb:"Bien pensado buscar alternativas para ahorrar, pero te has quedado sin preguntar plazos ni devoluciones." },
+        { label:"Nada, ya leeré la letra pequeña si hay problemas.", q:0, next:"n06",
+          reply:[ `Vale 😊 Te lo dejo resumido: devolución ${EMPRESA.devoluciones.dias} días sin montar y garantía de ${EMPRESA.garantia.anos} años.` ],
+          fb:"Leer las condiciones después es tarde: por ejemplo, un mueble montado ya no se puede devolver si no tiene defecto." },
+      ]},
+
+    n06: { step:6, topic:"Datos personales (Club TORNILLÖN)", ask:"Lucía te ofrece la tarjeta de cliente. ¿Qué haces con tus datos?", comp:["seg"],
+      messages:[
+        T(`Por cierto: con la tarjeta **${EMPRESA.club.nombre}** (gratis) tienes un ${EMPRESA.club.descuento} % de descuento y ${EMPRESA.club.regalo}. ¿Te interesa?`),
+      ],
+      choices:[
+        { label:"Vale. ¿Qué datos necesitáis, para qué los usaréis y puedo darme de baja?", q:2, next:"n07", flag:"club",
+          reply:[ `Solo ${EMPRESA.club.datos}. Se usan para aplicarte el descuento y, si lo aceptas, mandarte ofertas. Puedes ejercer tus derechos (acceso, rectificación, supresión...) y darte de baja cuando quieras. Te paso el formulario oficial: ${EMPRESA.web}/club 🔒`, NOTE(`Te das de alta en la web oficial ✔ · Descuento del ${EMPRESA.club.descuento} % aplicado`) ],
+          fb:"RGPD: tienes derecho a saber qué datos te piden y para qué, y solo deben pedir los mínimos (minimización de datos)." },
+        { label:"¡Sí! Te mando foto del DNI por las dos caras, mi dirección, mi teléfono y mi fecha de nacimiento, por si acaso.", q:0, next:"n07", flag:"club",
+          reply:[ "¡Para, para! 🛑 No necesito tu DNI para el Club. Nunca mandes fotos del DNI por chat si no es imprescindible: con eso pueden suplantar tu identidad.", `Solo hace falta ${EMPRESA.club.datos}, y te das de alta tú en ${EMPRESA.web}/club`, NOTE(`Descuento del ${EMPRESA.club.descuento} % aplicado`) ],
+          fb:"Nunca envíes el DNI ni datos de más. Con una foto de tu DNI pueden pedir créditos o abrir cuentas a tu nombre." },
+        { label:"No, gracias, no me gusta dar mis datos.", q:1, next:"n07",
+          reply:[ "¡Sin problema! Es tu decisión 😊" ],
+          fb:"Es legítimo no compartir datos, pero preguntar cuáles piden y para qué te habría ahorrado un 5 %." },
+      ]},
+
+    n07: { step:7, topic:"Forma de pago", ask:"¿Cómo pagas?", comp:["seg"],
+      messages:[
+        (s) => T(`El total queda en **${eur2(totalDe(lineasCliente(s), optsCliente(s)))}** (IVA incluido${s.flags.has("club") ? ", con tu 5 % del Club" : ""}). ¿Cómo quieres pagar?\n• ${EMPRESA.pago.slice(0, 2).join("\n• ")}`),
+      ],
+      choices:[
+        { label:"Te paso aquí el número de la tarjeta, la caducidad y el CVV, que es más rápido.", q:0, next:"n08",
+          reply:[ `🙈 ¡No, no, no! ${EMPRESA.avisoSeguridad} Borra ese mensaje. Te mando el enlace de pago seguro.`, T("🔒 https://www.tornillon.es/pago/P-2026-0287"), ACT("Pagas en la pasarela segura de tornillon.es 🔒", 2) ],
+          fb:"Los datos de la tarjeta solo se introducen en una pasarela de pago segura (https, candado, dominio oficial). Nunca por chat." },
+        { label:"Mándame el enlace de pago de vuestra web; comprobaré que empieza por https://www.tornillon.es", q:2, next:"n08",
+          reply:[ "¡Así me gusta! 🔒 https://www.tornillon.es/pago/P-2026-0287", ACT("Pagas en la pasarela segura de tornillon.es 🔒", 2) ],
+          fb:"Perfecto: pago en pasarela segura y comprobando el dominio. Así se evitan fraudes." },
+        { label:"Prefiero Bizum al número oficial de empresa que aparece en vuestra web.", q:2, next:"n08",
+          reply:[ "¡Perfecto! El número de Bizum está en la web, en «Formas de pago». Pon el nº de presupuesto en el concepto 😉", ACT("Haces el Bizum y pones «P-2026-0287» en el concepto 📲", 2) ],
+          fb:"Bien: un medio de pago seguro, al número que has comprobado en la web oficial." },
+      ]},
+
+    n08: { step:8, topic:"Pedir factura", ask:"Como autónomo/a, ¿qué le contestas?", comp:["adm"],
+      messages:[
+        (s) => IMG(svgTicket(PEDIDO_CLIENTE, lineasCliente(s).map(l => l.ref), [ ...(s.flags.has("club") ? [[`Dto. Club ${EMPRESA.club.descuento} %`, -subCliente(s) * EMPRESA.club.descuento / 100]] : []), ["Envío", envioDe(subCliente(s))] ]), "¡Pedido confirmado! 🎉"),
+        T("¿Necesitas **factura**? Te la puedo enviar en PDF."),
+        NOTE("💡 Como autónomo/a, el escritorio y la silla son gasto deducible... pero solo con una factura completa a tu nombre."),
+      ],
+      choices:[
+        { label:`Sí: a nombre de ${DATOS_FISCALES.cliente.split(" (")[0]}, NIF ${DATOS_FISCALES.nif}, dirección fiscal ${DATOS_FISCALES.direccion}. Por email, por favor.`, q:2, next:"route09", flag:"factura",
+          reply:[ (s) => DOC("Factura_F-2026-1123.pdf", "1 página · PDF · 81 kB", docComercial(lineasCliente(s), optsCliente(s, Object.assign({ tipo:"FACTURA", numero:"F-2026-1123" }, DATOS_FISCALES))), "Aquí la tienes, y también te llega por email 📧") ],
+          fb:"Una factura completa necesita nombre, NIF y dirección fiscal. Así puedes deducirte el gasto." },
+        { label:"Con el ticket me vale.", q:0, next:"route09",
+          reply:[ "¡Vale! Si luego la necesitas, pídemela con tus datos fiscales." ],
+          fb:"El ticket (factura simplificada) no lleva tus datos: como autónomo/a no podrías deducirte el gasto." },
+        { label:"Sí, ponla a nombre de «la persona del escritorio»... la dirección, la de mi madre en Xàtiva, o la mía, no sé.", q:1, next:"route09", flag:"factura",
+          reply:[ "Mmm 😅 La factura debe llevar tu nombre, tu NIF y tu dirección fiscal correctos; si no, habría que rectificarla.", ME(`Perdona: ${DATOS_FISCALES.cliente.split(" (")[0]}, NIF ${DATOS_FISCALES.nif}, ${DATOS_FISCALES.direccion}.`),
+                  (s) => DOC("Factura_F-2026-1123.pdf", "1 página · PDF · 81 kB", docComercial(lineasCliente(s), optsCliente(s, Object.assign({ tipo:"FACTURA", numero:"F-2026-1123" }, DATOS_FISCALES))), "¡Ahora sí! 📧") ],
+          fb:"Datos dudosos = factura mal emitida que hay que rectificar. Ten tus datos fiscales a mano." },
+      ]},
+
+    route09: { route:[{ flag:"sinMedir", next:"b09" }], next:"a09" },
+
+    a09: { step:9, topic:"Reclamar una pieza que falta", ask:"Te faltan 2 tornillos B-7. ¿Cómo lo reclamas?", comp:["der"],
+      messages:[
+        DAY("Jueves", "18:40"),
+        ACT("Llega el pedido. Te pones a montar el CURRÄNTE MINI con tu mejor playlist 🎶", 2.5),
+        NOTE("Paso 7 de 12: «Tornillo B-7 × 4»... y en la bolsa solo hay **2**. Ni rastro de los otros. 😤"),
+      ],
+      choices:[
+        { label:"Escribo a Lucía con el nº de pedido, la referencia de la pieza y una foto.", q:2, next:"a10",
+          say: MEIMG(svgManual("CURRÄNTE MINI", "Tornillo B-7", 4, 2), `Hola, Lucía. Pedido ${PEDIDO_CLIENTE}: en la bolsa del CURRÄNTE MINI faltan 2 tornillos B-7 (paso 7). Te adjunto foto.`),
+          reply:[ `¡Gracias por ponérmelo tan fácil! 🙌 Te enviamos 2 tornillos B-7 **gratis** en ${EMPRESA.piezas.plazoEnvio} (y uno extra, para la colección de piezas que sobran 😉).` ],
+          fb:`Reclamación eficaz: ${EMPRESA.piezas.necesitamos.join(", ")}. Tienes ${EMPRESA.piezas.plazoReclamar} días para avisar.` },
+        { label:"Le mando 6 notas de voz seguidas gritando «¡ME FALTA UN TORNILLO!».", q:0, next:"a10",
+          say: MEAUDIO(45, "¡¡ME FALTA UN TORNILLO!! ¡Esto es una vergüenza! ¡Llevo dos horas! (y cinco audios más)"),
+          reply:[ "¡Te entiendo, qué rabia! 😅 Para tramitarlo necesito el **nº de pedido** y una **foto** de la pieza que falta con su referencia del manual.", MEIMG(svgManual("CURRÄNTE MINI", "Tornillo B-7", 4, 2), `Perdona... Pedido ${PEDIDO_CLIENTE}.`), `¡Listo! Te los enviamos gratis en ${EMPRESA.piezas.plazoEnvio} 🔩` ],
+          fb:"Enfadarse no acelera nada. Lo que agiliza una reclamación: nº de pedido + qué falta (referencia) + foto." },
+        { label:"Voy a la ferretería, compro unos tornillos «parecidos» y aprieto fuerte.", q:1, next:"a10",
+          reply:[ NOTE("Los tornillos de la ferretería son 5 mm más largos... y asoman por encima del tablero 🙃"), ME(`Lucía, al final compré otros y asoman... Pedido ${PEDIDO_CLIENTE}, me faltaban 2 B-7.`), `¡Ay! La próxima vez escríbenos: la pieza original es **gratis**. Te envío los B-7 en ${EMPRESA.piezas.plazoEnvio}.` ],
+          fb:"Tienes derecho a recibir el producto completo: reclamar la pieza original es gratis y más seguro." },
+      ]},
+
+    b09: { step:9, topic:"Devolver un producto que no cabe", ask:"El escritorio no cabe. ¿Qué haces?", comp:["der"],
+      messages:[
+        DAY("Jueves", "18:40"),
+        ACT("Llega el pedido. Desembalas el tablero del CURRÄNTE y lo apoyas en el hueco...", 2.5),
+        NOTE("Hueco: 110 cm. Escritorio: 120 cm. Sobran 10 cm de escritorio 😬 (Todavía no lo has montado)."),
+      ],
+      choices:[
+        { label:`Escribo a Lucía: está sin montar y en su caja, ¿puedo cambiarlo por el MINI dentro de los ${EMPRESA.devoluciones.dias} días?`, q:2, next:"a10",
+          reply:[ `¡Claro! Al estar **sin montar y en su embalaje**, entra en la devolución de ${EMPRESA.devoluciones.dias} días. Lo cambiamos por el CURRÄNTE MINI y te devolvemos la diferencia (${eur(precio("CURRANTE") - precio("CURRANTEMINI"))}) ${EMPRESA.devoluciones.reembolso.toLowerCase()}`, ACT("Pasa el transportista: se lleva el grande y te deja el MINI 🔄", 2) ],
+          fb:`Bien: devolución dentro de plazo (${EMPRESA.devoluciones.dias} días) y con el producto ${EMPRESA.devoluciones.condicion}.` },
+        { label:"Lo monto igualmente y le corto 10 cm con la sierra del vecino.", q:0, next:"a10",
+          reply:[ NOTE("🪚 Queda torcido. Y el vecino te ha visto. Y no se lo va a callar."), ME("Lucía... ¿lo puedo devolver? Lo he cortado un poquito."), `Uf 😔 Un mueble montado (¡y serrado!) sin defecto no entra en la devolución. Lo que sí puedo es ofrecerte un ${EMPRESA.club.descuento} % en un CURRÄNTE MINI nuevo.` ],
+          fb:`${EMPRESA.devoluciones.montado} Modificarlo anula la devolución y la garantía.` },
+        { label:"Lo dejo en el pasillo y ya veré... (pasan 6 semanas)", q:0, next:"a10",
+          reply:[ NOTE("Pasan 6 semanas tropezando con la caja..."), ME("Lucía, ¿puedo devolver el escritorio?"), `Lo siento 😔 Han pasado más de ${EMPRESA.devoluciones.dias} días desde la entrega, así que ya no entra en la devolución.` ],
+          fb:`Los plazos cuentan: la devolución es de ${EMPRESA.devoluciones.dias} días desde la entrega. Actúa pronto.` },
+      ]},
+
+    a10: { step:10, topic:"Producto dañado", ask:"La LIBRØTEK llega con un panel partido. ¿Qué haces?", comp:["der","adm"],
+      messages:[
+        DAY("Viernes", "12:15"),
+        NOTE("Abres la caja de la estantería LIBRØTEK... y un panel lateral tiene la esquina partida 💥"),
+      ],
+      choices:[
+        { label:"Hago foto antes de montar nada y lo comunico hoy con el nº de pedido. Pido el panel nuevo o el cambio.", q:2, next:"n11",
+          say: MEIMG(svgFoto("Esquina del panel lateral partida", "LIBRØTEK · caja 1/2"), `Pedido ${PEDIDO_CLIENTE}: el panel lateral de la LIBRØTEK ha llegado partido. No la he montado.`),
+          reply:[ `¡Qué rabia, lo siento! 😔 Gracias por la foto: es un daño de transporte, así que te mandamos un **panel nuevo gratis** en ${EMPRESA.piezas.plazoEnvio}. Si lo prefieres, la cambiamos entera.` ],
+          fb:`Foto + nº de pedido + aviso rápido (tienes ${EMPRESA.piezas.plazoReclamar} días). Sin montar, tienes todas las opciones abiertas.` },
+        { label:"La monto igual y pongo la parte rota contra la pared. Nadie se dará cuenta.", q:0, next:"n11",
+          reply:[ NOTE("La estantería cojea un poco. Tus libros de Contabilidad, también. 📚") ],
+          fb:"Tienes derecho a recibir el producto en buen estado. Si no reclamas a tiempo, pierdes la reposición gratuita." },
+        { label:"Escribo: «Me ha llegado todo ROTO. Quiero mi dinero YA o os denuncio».", q:1, next:"n11",
+          reply:[ "Entiendo el enfado 😔 Para ayudarte, ¿me mandas el nº de pedido y una foto del daño?", MEIMG(svgFoto("Esquina del panel lateral partida", "LIBRØTEK · caja 1/2"), `${PEDIDO_CLIENTE}. Bueno... solo es un panel.`), `¡Gracias! Te mandamos el panel nuevo gratis en ${EMPRESA.piezas.plazoEnvio}.` ],
+          fb:"Exagerar y amenazar no ayuda. Describe el problema con precisión y aporta pruebas (foto y nº de pedido)." },
+      ]},
+
+    n11: { step:11, topic:"Mensaje sospechoso (phishing)", ask:"Te llega un mensaje «de TORNILLÖN» desde un número raro. ¿Qué haces?", comp:["seg"],
+      messages:[
+        DAY("Lunes", "09:12"),
+        CHAT("estafa"),
+        T("TORNILLÖN Envíos 📦: Estimado cliente, su pedido está RETENIDO por tasas de aduana."),
+        IMG(svgPhishing()),
+        T("Pague 1,99 € en 2 HORAS o será DESTRUIDO 👉 http://tornil1on-envios.top/pago-tasas"),
+      ],
+      choices:[
+        { label:"Toco el enlace, que solo es 1,99 € y no quiero perder el pedido.", q:0, next:"p12a", say:"",
+          fb:"Señales de phishing: número desconocido, urgencia, amenazas, faltas y un dominio raro (tornil1on, con un 1)." },
+        { label:"No toco nada. Lo compruebo escribiendo al número oficial de TORNILLÖN, el de su web.", q:2, next:"p12", say:"",
+          fb:"Perfecto: ante la duda, verifica por un canal oficial que tú conoces, nunca por el enlace del mensaje." },
+        { label:"Le contesto: «¿Quién eres? Te paso mi DNI para que compruebes que soy yo».", q:0, next:"p12a",
+          reply:[ "Ok cliente 👍 Verificado. Para liberar pague aquí 👉 http://tornil1on-envios.top/pago-tasas", NOTE("Sin pensarlo mucho, tocas el enlace...") ],
+          fb:"Contestar a un estafador confirma que tu número está activo, y darle datos facilita que te suplanten." },
+      ]},
+
+    p12a: { step:12, topic:"Web falsa de pago", ask:"La web pide tarjeta, CVV y el código SMS. ¿Qué haces?", comp:["seg"],
+      messages:[
+        NOTE("Se abre esta web 👇"),
+        IMG(svgWebFalsa(), "Vista de la web que se ha abierto"),
+      ],
+      choices:[
+        { label:"Lo relleno todo rápido antes de que destruyan mi paquete.", q:0, next:"fin_estafa",
+          fb:"Nunca des la tarjeta, el CVV ni el código SMS en una web a la que llegas desde un mensaje. El código SMS sirve para autorizar pagos." },
+        { label:"¡Un momento! «No seguro», «tornil1on», prisas... Cierro la web y pregunto a TORNILLÖN por el canal oficial.", q:1, next:"p12",
+          fb:"Bien rectificado a tiempo. La próxima vez, no toques el enlace: las señales estaban en el primer mensaje." },
+      ]},
+
+    p12: { step:12, topic:"Qué hacer con el phishing", ask:"Ya sabes que es falso. ¿Qué haces con el mensaje?", comp:["seg"],
+      messages:[
+        CHAT("lucia"),
+        ME("Hola, Lucía. Me ha llegado un mensaje de «TORNILLÖN Envíos» desde un número desconocido, el +34 631 90 04 61, pidiendo 1,99 € de tasas. ¿Es vuestro?"),
+        T(`🚨 ¡NO es nuestro! Es **phishing** (suplantación). Nuestro único WhatsApp es el ${EMPRESA.whatsapp}, con la insignia verde de empresa verificada ✓. ${EMPRESA.avisoSeguridad}`),
+        T("Tu pedido está en reparto normal, sin tasas. Envíos dentro de España no pagan aduana 😉"),
+      ],
+      choices:[
+        { label:"Bloqueo y denuncio el número en WhatsApp, borro el mensaje y aviso a mi familia de que circula. Si dudo, llamo al 017 de INCIBE.", q:2, next:"n13",
+          reply:[ "¡Eres un/a crack de la ciberseguridad! 🛡️ Gracias por avisar: lo publicamos en nuestras redes para alertar a más clientes." ],
+          fb:"Bloquear, denunciar y avisar corta la cadena. El 017 (INCIBE) es la línea gratuita de ayuda en ciberseguridad." },
+        { label:"Lo reenvío a todos mis grupos con «MIRAD QUÉ CHOLLO 😂».", q:0, next:"n13",
+          reply:[ "Ejem... alguien de tu grupo podría picar 😬 Mejor bloquéalo y denúncialo, y avisa de que es falso." ],
+          fb:"Reenviar un phishing (aunque sea en broma) ayuda a que otros caigan." },
+        { label:"Lo borro y ya.", q:1, next:"n13",
+          reply:[ "Bien hecho no tocarlo 👍 Si además lo bloqueas y lo denuncias, ayudas a que no le llegue a más gente." ],
+          fb:"Bien por no tocarlo. Mejor todavía: bloquear y denunciar el número." },
+      ]},
+
+    n13: { step:13, topic:"Guardar justificantes", ask:"Todo resuelto. ¿Cómo cierras la compra?", comp:["adm"],
+      messages:[
+        T("Ya tienes todo montado y sin piezas de más (¡milagro!) 🎉 ¿Te puedo ayudar en algo más?"),
+      ],
+      choices:[
+        { label:"Todo perfecto. Guardo el presupuesto, la factura y el nº de pedido en una carpeta «Casa/Compras» de mi nube.", q:2, next:"fin",
+          reply:[ `¡Orden nivel TORNILLÖN! 🗂️ Con eso tienes cubiertos los ${EMPRESA.garantia.anos} años de garantía. ¡Un placer!` ],
+          fb:`Digitalizar y organizar justificantes te permite reclamar la garantía (${EMPRESA.garantia.anos} años) o justificar gastos.` },
+        { label:"Gracias. Os dejo una reseña sincera: las piezas llegaron rápido y lo resolvisteis bien.", q:1, next:"fin",
+          reply:[ "¡Mil gracias! 💛 Guarda también la factura y el nº de pedido, por si tiras de garantía." ],
+          fb:"Una reseña honesta ayuda a otros clientes, pero no olvides guardar tus justificantes." },
+        { label:"Borro el chat y los PDF, que ocupan memoria.", q:0, next:"fin",
+          reply:[ "¡Uy! Si algo falla, te pediremos el nº de pedido o la factura 😅 Mejor guárdalos en la nube." ],
+          fb:"Sin factura ni nº de pedido, reclamar la garantía se complica mucho." },
+      ]},
+
+    fin:        { end:"auto" },
+    fin_estafa: { messages:[ ACT("Enviando datos a tornil1on-envios.top...", 1.5), NOTE("📱 SMS de tu banco: «Compra de 649,00 € en ELECTRO-ONLINE autorizada»"), NOTE("😱 No era 1,99 €...") ], end:"E_ESTAFA" },
+  },
+
+  auto: [ { min:80, end:"E_TOP" }, { min:50, end:"E_MID" }, { min:0, end:"E_LOW" } ],
+
+  endings: {
+    E_TOP:    { type:"good", emoji:"🏆", title:"Cliente 10 · Llave Allen dorada", short:"Te han atendido de lujo... porque tú también lo has hecho de lujo.",
+      text:"Has preguntado lo importante, has pedido todo por escrito, has protegido tus datos y has reclamado con pruebas. Encima, has detectado una estafa. TORNILLÖN quiere ponerte en su anuncio.",
+      lesson:"Un cliente informado **pregunta antes de pagar**, pide **presupuesto y factura correctos**, **reclama con nº de pedido y foto** y **nunca da datos de pago por chat**." },
+    E_MID:    { type:"mid", emoji:"🔩", title:"Cliente aprendiz · Te sobra alguna pieza", short:"El despacho está montado... pero algo cojea.",
+      text:"Has conseguido tus muebles, aunque por el camino has tomado alguna decisión arriesgada: datos de más, condiciones sin leer o reclamaciones poco claras.",
+      lesson:"Repasa tus errores abajo: casi todos se evitan **preguntando antes**, **guardando documentos** y **comunicando con datos concretos**." },
+    E_LOW:    { type:"bad", emoji:"🪛", title:"Montado al revés", short:"Tu escritorio, tu bolsillo y tus datos han sufrido.",
+      text:"Compras a ojo, sin papeles y dando datos sin pensar... TORNILLÖN te ha ayudado mucho, pero un cliente así lo tiene difícil con otras empresas menos majas.",
+      lesson:"Vuelve a jugar fijándote en: **medidas y fichas técnicas**, **presupuesto por escrito**, **plazos de devolución** y **seguridad digital**." },
+    E_ESTAFA: { type:"bad", emoji:"🎣", title:"¡Te han pescado! (phishing)", short:"Los estafadores tienen tu tarjeta y tu código SMS.",
+      text:"El mensaje no era de TORNILLÖN: número desconocido, urgencia, faltas y un dominio falso (tornil1on-envios.top). Con la tarjeta, el CVV y el código SMS han hecho una compra de 649 €.",
+      lesson:"Si te pasa: **llama a tu banco y bloquea la tarjeta**, **denuncia** (Policía/Guardia Civil) y pide ayuda al **017 de INCIBE**. Y recuerda: **verifica siempre por el canal oficial** y **nunca des el código SMS**." },
+  },
+};
+
+</script>
+<script>
+// Logotipos de TORNILLÖN incrustados (PNG optimizados)
+const LOGO_ICON = "data:image/png;base64,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";
+const LOGO_H = "data:image/png;base64,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";
+const LOGO_V = "data:image/png;base64,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";
+</script>
+<script>
+// =========================================================================
+//  MOTOR DEL CHAT (no hace falta tocarlo para cambiar la historia)
+// =========================================================================
+(function(){
+const Q = new URLSearchParams(location.search);
+const DEV = Q.has("dev");
+const SPEED = Q.has("turbo") ? 0 : (DEV ? 0.15 : 1);
+const $ = (id) => document.getElementById(id);
+const chat = $("chat"), tray = $("tray"), progress = $("progress");
+const nameEl = $("hName"), statusEl = $("hStatus"), avatarEl = $("hAvatar"), chipEl = $("hChip");
+const LOGOS = { icon: LOGO_ICON, h: LOGO_H, v: LOGO_V };
+let run = 0, state = null;
+
+const sleep = (ms) => new Promise(r => setTimeout(r, ms * SPEED));
+const fill = (s) => String(s).replace(/\{\{LOGO_H\}\}/g, LOGOS.h).replace(/\{\{LOGO_ICON\}\}/g, LOGOS.icon).replace(/\{\{NOMBRE\}\}/g, () => esc(state && state.name || STORY.defaultName || "Alex"));
+const md = (s) => esc(fill(s)).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/_(.+?)_/g, "<i>$1</i>");
+function clock(){ const m = state.min % 1440; return String(Math.floor(m/60)).padStart(2,"0") + ":" + String(m%60).padStart(2,"0"); }
+function scroll(){ requestAnimationFrame(() => { chat.scrollTop = chat.scrollHeight; }); }
+
+// ---------- validación de la historia ----------
+function validate(){
+  const errs = [], N = STORY.nodes, E = STORY.endings || {};
+  const has = (id) => Object.prototype.hasOwnProperty.call(N, id);
+  if (!has(STORY.start)) errs.push(`start "${STORY.start}" no existe`);
+  const checkMsgs = (arr, where) => (arr || []).forEach(m => { if (m.type === "chat" && !STORY.contacts[m.key]) errs.push(`${where}: contacto "${m.key}" no existe`); });
+  for (const [id, n] of Object.entries(N)){
+    checkMsgs(n.messages, id);
+    if (n.end){ if (n.end !== "auto" && !E[n.end]) errs.push(`${id}: final "${n.end}" no existe`); continue; }
+    if (n.route){ n.route.forEach(r => { if (!has(r.next)) errs.push(`${id}: route → "${r.next}" no existe`); }); if (!has(n.next)) errs.push(`${id}: route por defecto → "${n.next}" no existe`); continue; }
+    if (!n.choices || !n.choices.length) errs.push(`${id}: sin opciones ni final`);
+    (n.choices || []).forEach((c, i) => {
+      if (!has(c.next)) errs.push(`${id}[${i}]: next "${c.next}" no existe`);
+      if (typeof c.q !== "number") errs.push(`${id}[${i}]: falta q (0-2)`);
+      checkMsgs([].concat(c.reply || []).filter(x => typeof x === "object"), id + "[" + i + "]");
+    });
+  }
+  (STORY.auto || []).forEach(a => { if (!E[a.end]) errs.push(`auto: final "${a.end}" no existe`); });
+  (STORY.critical || []).forEach(a => { if (!E[a.end]) errs.push(`critical: final "${a.end}" no existe`); });
+  errs.forEach(e => console.error("[STORY] " + e));
+  return errs;
+}
+
+// ---------- contacto / cabecera ----------
+function setContact(key){
+  const c = STORY.contacts[key]; state.contact = key;
+  nameEl.innerHTML = esc(c.name) + (c.verified ? ' <span class="verif" title="Cuenta de empresa verificada">✓</span>' : "");
+  statusEl.textContent = c.status || "en línea"; statusEl.className = "h-status";
+  avatarEl.style.background = c.color || "#fff";
+  avatarEl.innerHTML = c.avatar === "logo" ? `<img src="${LOGOS.icon}" alt="">` : esc(c.avatar || c.name[0]);
+  avatarEl.style.color = c.color ? "#fff" : "";
+  chipEl.textContent = c.chip || "";
+}
+function setStatus(t, typing){ statusEl.textContent = t; statusEl.className = "h-status" + (typing ? " typing" : ""); }
+function restStatus(){ const c = STORY.contacts[state.contact]; setStatus(c.status || "en línea"); }
+
+// ---------- burbujas ----------
+function bubble(out, cls=""){
+  const b = document.createElement("div"); b.className = "msg " + (out ? "out" : "in") + (cls ? " " + cls : "");
+  const c = STORY.contacts[state.contact];
+  if (!out && c.group && c.who){ const w = document.createElement("div"); w.className = "who"; w.textContent = c.who; b.appendChild(w); }
+  chat.appendChild(b); return b;
+}
+function stamp(b){ const t = document.createElement("span"); t.className = "time"; t.textContent = clock(); b.appendChild(t); state.min += 1; }
+function note(text, cls=""){ const n = document.createElement("div"); n.className = "note " + cls; n.innerHTML = md(text); chat.appendChild(n); scroll(); }
+function render(m){
+  if (m.type === "note"){ note(m.text, m.cls); return; }
+  if (m.type === "day"){ if (m.clock){ const [h, mi] = m.clock.split(":").map(Number); state.min = h*60 + mi; } const d = document.createElement("div"); d.className = "day"; d.textContent = m.label; chat.appendChild(d); scroll(); return; }
+  if (m.type === "text"){ const b = bubble(m.out); const t = document.createElement("div"); t.className = "t"; t.innerHTML = md(m.text); b.appendChild(t); stamp(b); }
+  else if (m.type === "image"){ const b = bubble(m.out, "img"); const p = document.createElement("div"); p.className = "pic"; p.innerHTML = fill(m.svg); p.setAttribute("role","button"); p.setAttribute("aria-label","Ampliar imagen"); p.tabIndex = 0;
+    p.onclick = () => openModal(m.caption || "Imagen", fill(m.svg)); b.appendChild(p);
+    if (m.caption){ const c = document.createElement("div"); c.className = "cap"; c.innerHTML = md(m.caption); b.appendChild(c); } stamp(b); }
+  else if (m.type === "doc"){ const b = bubble(m.out); const d = document.createElement("button"); d.className = "doc";
+    d.innerHTML = `<span class="ico">PDF</span><span><b>${esc(m.name)}</b><small>${esc(m.meta || "1 página · PDF")} · toca para abrir</small></span>`;
+    d.onclick = () => openModal(m.name, fill(m.html)); b.appendChild(d);
+    if (m.caption){ const c = document.createElement("div"); c.className = "t"; c.style.marginTop = "5px"; c.innerHTML = md(m.caption); b.appendChild(c); } stamp(b); }
+  else if (m.type === "audio"){ const b = bubble(m.out); const a = document.createElement("div"); a.className = "audio";
+    const bars = Array.from({length: 28}, (_, i) => `<span style="height:${20 + Math.round(70 * Math.abs(Math.sin(i * 1.7 + m.seconds)))}%"></span>`).join("");
+    a.innerHTML = `<button class="play" aria-label="Reproducir nota de voz">▶</button><div class="wave">${bars}</div><span class="a-dur">0:${String(m.seconds).padStart(2,"0")}</span>`;
+    b.appendChild(a); const tr = document.createElement("div"); tr.className = "transcript"; tr.innerHTML = md(m.transcript); b.appendChild(tr);
+    a.querySelector(".play").onclick = (ev) => playAudio(ev.currentTarget, a, m); stamp(b); }
+  scroll();
+}
+let playing = null;
+function playAudio(btn, a, m){
+  const spans = [...a.querySelectorAll(".wave span")];
+  if (playing){ playing.stop(); if (playing.btn === btn){ playing = null; return; } }
+  let t0 = performance.now(), raf, dur = m.seconds * 1000;
+  const stop = () => { cancelAnimationFrame(raf); spans.forEach(s => s.classList.remove("on")); btn.textContent = "▶"; try{ speechSynthesis.cancel(); }catch(e){} };
+  try{ const u = new SpeechSynthesisUtterance(m.transcript.replace(/[*_]/g, "")); u.lang = "es-ES"; u.rate = 1.05; speechSynthesis.cancel(); speechSynthesis.speak(u); }catch(e){}
+  btn.textContent = "❚❚";
+  (function tick(now){ const p = Math.min(1, (now - t0) / dur); spans.forEach((s, i) => s.classList.toggle("on", i / spans.length < p)); if (p < 1) raf = requestAnimationFrame(tick); else { stop(); playing = null; } })(t0);
+  playing = { btn, stop };
+}
+function typingBubble(){ const t = document.createElement("div"); t.className = "typing"; t.innerHTML = "<span></span><span></span><span></span>"; chat.appendChild(t); scroll(); return t; }
+
+async function deliver(m, my){
+  if (my !== run) return;
+  if (typeof m === "function") m = m(state);
+  if (!m) return;
+  if (m.type === "chat"){ await switchChat(m.key, my); return; }
+  if (m.type === "action"){
+    const w = document.createElement("div"); w.className = "waiting"; w.innerHTML = md(m.text) + '<div class="bar"><i></i></div>'; chat.appendChild(w); scroll();
+    const bar = w.querySelector("i"), ms = m.wait * 1000 * SPEED, t0 = performance.now();
+    await new Promise(res => { (function tick(now){ if (my !== run) return res(); const p = ms ? Math.min(1, (now - t0) / ms) : 1; bar.style.width = (p * 100) + "%"; if (p < 1) requestAnimationFrame(tick); else res(); })(t0); });
+    state.min += Math.max(5, Math.round(m.wait * 10)); return;
+  }
+  if (m.type === "note" || m.type === "day"){ await sleep(250); if (my === run) render(m); return; }
+  if (m.out){ await sleep(350); if (my === run) render(m); return; }
+  const len = m.type === "text" ? m.text.length : 60;
+  const wait = m.type === "audio" ? 1500 : Math.min(2600, 700 + len * 14);
+  setStatus(m.type === "audio" ? "grabando audio..." : "escribiendo...", true);
+  const t = typingBubble(); await sleep(wait); t.remove();
+  if (my !== run) return; restStatus(); render(m); await sleep(380);
+}
+async function switchChat(key, my){
+  const c = STORY.contacts[key], toast = $("toast");
+  toast.innerHTML = `<div class="avatar" style="background:${c.color || "#fff"};color:#fff">${c.avatar === "logo" ? `<img src="${LOGOS.icon}" alt="">` : esc(c.avatar || c.name[0])}</div><div><b>${esc(c.name)}</b>${esc(c.preview || "Nuevo mensaje")}</div>`;
+  toast.classList.add("show"); await sleep(1300); toast.classList.remove("show");
+  if (my !== run) return;
+  chat.innerHTML = ""; setContact(key);
+  if (c.intro) note(c.intro, "sec");
+  await sleep(300);
+}
+
+// ---------- progreso ----------
+function paintProgress(step){ [...progress.children].forEach((b, i) => b.classList.toggle("done", i < step)); }
+
+// ---------- flujo ----------
+async function goTo(id){
+  const my = run; let node = STORY.nodes[id];
+  if (!node){ note(`⚠️ Falta el nodo "${id}" en STORY`); console.error("Falta nodo", id); return; }
+  while (node.route){ const r = node.route.find(r => state.flags.has(r.flag)); id = r ? r.next : node.next; node = STORY.nodes[id]; }
+  state.node = id; state.path.push(id); updateDev();
+  if (node.step) paintProgress(node.step - 1);
+  for (const m of node.messages || []){ await deliver(m, my); if (my !== run) return; }
+  if (node.end){ finish(node.end, my); return; }
+  showChoices(node, id, my);
+}
+function shuffle(a){ for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function showChoices(node, id, my){
+  tray.innerHTML = "";
+  if (node.ask){ const a = document.createElement("div"); a.className = "ask"; a.textContent = node.ask; tray.appendChild(a); }
+  const idx = node.choices.map((_, i) => i); if (!node.fixed && !DEV) shuffle(idx);
+  idx.forEach(i => { const c = node.choices[i]; const b = document.createElement("button"); b.className = "opt"; b.dataset.i = i; b.innerHTML = md(c.label);
+    b.onclick = () => choose(id, i, my); tray.appendChild(b); });
+  scroll();
+}
+async function choose(id, i, my){
+  if (my !== run) return;
+  const node = STORY.nodes[id], c = node.choices[i]; tray.innerHTML = "";
+  const comps = c.comp || node.comp || [];
+  comps.forEach(k => { const s = state.score[k]; s.got += c.q; s.max += 2; });
+  if (c.flag) [].concat(c.flag).forEach(f => state.flags.add(f));
+  state.log.push({ step: node.step, topic: node.topic || node.ask || id, label: fill(c.label).replace(/\*\*/g, ""), q: c.q, fb: c.fb || "", comps });
+  if (node.step) paintProgress(node.step);
+  const say = c.say === undefined ? c.label : c.say;
+  if (say) await deliver(typeof say === "string" ? ME(say) : say, my);
+  if (my !== run) return;
+  for (const r of [].concat(c.reply || [])) { await deliver(typeof r === "string" ? T(r) : r, my); if (my !== run) return; }
+  if (my === run) goTo(c.next);
+}
+
+function pct(){ let g = 0, m = 0; Object.values(state.score).forEach(s => { g += s.got; m += s.max; }); return { g, m, p: m ? Math.round(100 * g / m) : 0 }; }
+function pickEnding(key){
+  if (key !== "auto") return key;
+  for (const c of STORY.critical || []) if (state.flags.has(c.flag)) return c.end;
+  const p = pct().p; for (const a of STORY.auto) if (p >= a.min) return a.end;
+  return STORY.auto[STORY.auto.length - 1].end;
+}
+async function finish(key, my){
+  const k = pickEnding(key), E = STORY.endings[k]; state.ending = k;
+  paintProgress(STORY.steps);
+  const e = document.createElement("div"); e.className = "end " + E.type; e.innerHTML = `<strong>${esc(E.emoji || "")} ${esc(E.title)}</strong>${md(E.short || "")}`; chat.appendChild(e); scroll();
+  try { const key2 = "tornillon_" + STORY.id, f = JSON.parse(localStorage.getItem(key2) || "[]"); if (!f.includes(k)) f.push(k); localStorage.setItem(key2, JSON.stringify(f)); state.found = f; } catch(err){ state.found = [k]; }
+  const b = document.createElement("button"); b.className = "btn"; b.textContent = "Ver mi resultado"; b.style.alignSelf = "center"; b.onclick = showResult; chat.appendChild(b); scroll();
+  await sleep(1400); if (my === run) showResult();
+}
+
+// ---------- resultado ----------
+function resultText(){
+  const E = STORY.endings[state.ending], P = pct(), d = new Date();
+  const L = [];
+  L.push(`${EMPRESA.nombre} · ${STORY.title} — RESULTADO`);
+  L.push(`Alumno/a: ${state.name || "(sin nombre)"}`);
+  L.push(`Fecha: ${d.toLocaleDateString("es-ES")} ${d.toLocaleTimeString("es-ES", {hour:"2-digit", minute:"2-digit"})}`);
+  L.push(`Final: ${E.title}`);
+  L.push(`Puntuación: ${P.g}/${P.m} (${P.p} %)`);
+  L.push("Competencias:");
+  Object.entries(STORY.comps).forEach(([k, lab]) => { const s = state.score[k]; L.push(`  - ${lab}: ${s.got}/${s.max}` + (s.max ? ` (${Math.round(100 * s.got / s.max)} %)` : "")); });
+  L.push("Decisiones:");
+  state.log.forEach((l, i) => L.push(`  ${i + 1}. [${l.q === 2 ? "ACIERTO" : l.q === 1 ? "MEJORABLE" : "ERROR"}] ${l.topic}: "${l.label}"` + (l.fb ? ` → ${l.fb}` : "")));
+  L.push(`Lección: ${E.lesson.replace(/\*\*/g, "")}`);
+  return L.join("\n");
+}
+function showResult(){
+  const E = STORY.endings[state.ending], P = pct(), R = $("result");
+  const ok = state.log.filter(l => l.q === 2).length, meh = state.log.filter(l => l.q === 1).length, ko = state.log.filter(l => l.q === 0).length;
+  const comps = Object.entries(STORY.comps).map(([k, lab]) => { const s = state.score[k], p = s.max ? Math.round(100 * s.got / s.max) : 0;
+    return `<div class="comp"><span>${esc(lab)}</span><div class="cb"><i style="width:${p}%"></i></div><b>${s.max ? p + " %" : "—"}</b></div>`; }).join("");
+  const decs = state.log.map((l, i) => `<div class="dec"><div class="dl"><span class="${l.q === 2 ? "ok" : l.q === 1 ? "meh" : "ko"}">${l.q === 2 ? "✔" : l.q === 1 ? "◐" : "✘"}</span> ${i + 1}. ${esc(l.topic)}</div><div>“${esc(l.label)}”</div>${l.fb ? `<div class="fb">${md(l.fb)}</div>` : ""}</div>`).join("");
+  const total = Object.keys(STORY.endings).length;
+  R.innerHTML = `<img class="logo" src="${LOGOS.h}" alt="TORNILLÖN" style="width:180px">
+  <div class="res-head ${E.type}"><div class="tt">${esc(E.emoji || "")} ${esc(E.title)}</div><div class="big">${P.p} %</div><div>${P.g} de ${P.m} puntos · ${esc(state.name || "Alumno/a")}</div></div>
+  <div class="card"><h3>¿Qué ha pasado?</h3>${md(E.text)}</div>
+  <div class="card"><h3>💡 Lo que te llevas</h3>${md(E.lesson)}</div>
+  <div class="card"><h3>Competencias</h3>${comps}</div>
+  <div class="card"><h3>Tus decisiones · <span class="ok">✔ ${ok}</span> · <span class="meh">◐ ${meh}</span> · <span class="ko">✘ ${ko}</span></h3>${decs}</div>
+  <div class="found">Finales descubiertos: ${(state.found || []).length} de ${total}</div>
+  <button class="btn" id="bCopy">📋 Copiar resultado</button>
+  <button class="btn sec" id="bDown">⬇️ Descargar resultado (.txt)</button>
+  <div class="copied" id="copied"></div>
+  <button class="btn ghost" id="bAgain">🔁 Volver a jugar</button>
+  <div class="meta">${esc(EMPRESA.lema)} · ${esc(STORY.subtitle)}</div>`;
+  R.hidden = false; R.classList.remove("hide"); R.scrollTop = 0;
+  $("bCopy").onclick = copyResult; $("bDown").onclick = downloadResult; $("bAgain").onclick = () => { R.hidden = true; start(); };
+}
+function copyResult(){
+  const txt = resultText(), done = (m) => { $("copied").textContent = m; };
+  const fallback = () => { const ta = document.createElement("textarea"); ta.value = txt; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); done("✔ Copiado. Pégalo en la tarea o en un email para tu profe."); } catch(e){ done("No se pudo copiar: usa Descargar."); } ta.remove(); };
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).then(() => done("✔ Copiado. Pégalo en la tarea o en un email para tu profe."), fallback); else fallback();
+}
+function downloadResult(){
+  const blob = new Blob([resultText()], { type: "text/plain;charset=utf-8" }), a = document.createElement("a");
+  const n = (state.name || "alumno").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w]+/g, "_").replace(/^_|_$/g, "").toLowerCase() || "alumno";
+  a.href = URL.createObjectURL(blob); a.download = `tornillon_${STORY.id}_${n}.txt`; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000); $("copied").textContent = "✔ Archivo descargado.";
+}
+
+// ---------- modal ----------
+function openModal(title, html){ $("mTitle").textContent = title; $("mBody").innerHTML = html; $("modal").hidden = false; }
+$("mClose").onclick = () => { $("modal").hidden = true; };
+$("modal").addEventListener("click", (e) => { if (e.target.id === "modal") $("modal").hidden = true; });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("modal").hidden = true; });
+
+// ---------- inicio ----------
+function start(jump){
+  run++; if (playing){ playing.stop(); playing = null; }
+  const name = ($("alumno").value || "").trim().slice(0, 40);
+  state = { name, min: STORY.clockStart || 600, score: Object.fromEntries(Object.keys(STORY.comps).map(k => [k, { got: 0, max: 0 }])), log: [], flags: new Set(), path: [], node: null, ending: null, contact: null };
+  chat.innerHTML = ""; tray.innerHTML = ""; progress.innerHTML = Array.from({ length: STORY.steps }, () => "<i></i>").join("");
+  setContact(STORY.firstContact);
+  goTo(jump || STORY.start);
+}
+function updateDev(){ if (DEV && state) $("devNode").textContent = state.node; }
+
+// pantalla inicial
+$("sLogo").src = LOGOS.v; document.querySelectorAll("img[data-logo]").forEach(i => i.src = LOGOS[i.dataset.logo]);
+const errs = validate();
+$("playBtn").onclick = () => { $("startScreen").classList.add("hide"); setTimeout(() => { $("startScreen").hidden = true; }, 320); start(); };
+try { const f = JSON.parse(localStorage.getItem("tornillon_" + STORY.id) || "[]"); if (f.length) $("sFound").textContent = `Finales descubiertos: ${f.length} de ${Object.keys(STORY.endings).length}`; } catch(e){}
+
+if (DEV){
+  const d = $("dev"); d.classList.add("show");
+  const sel = $("jump"); sel.innerHTML = '<option value="">saltar a nodo…</option>' + Object.keys(STORY.nodes).map(k => `<option>${k}</option>`).join("");
+  sel.onchange = () => { if (!sel.value) return; $("startScreen").hidden = true; $("result").hidden = true; const v = sel.value; sel.value = ""; start(v); };
+  $("devVal").innerHTML = errs.length ? `<span class="err">✘ ${errs.length} errores (consola)</span>` : "✔ historia validada";
+}
+window.JUEGO = { STORY, validate, start, get state(){ return state; }, resultText, pct };
+})();
+
+</script>
+</body>
+</html>
