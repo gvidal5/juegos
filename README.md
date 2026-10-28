@@ -1,6 +1,6 @@
 # Juegos de Gabriel Vidal
 
-Simulaciones educativas para Formación Profesional, especialidad **Gestión Administrativa**, de Gabriel Vidal. Cada juego es una página web autónoma (HTML, CSS y JavaScript en un solo archivo) y se publica con [GitHub Pages](https://gvidal5.github.io/juegos/) desde la raíz de la rama `main`.
+Simulaciones educativas. Cada juego es una página web autónoma (HTML, CSS y JavaScript en un solo archivo) y se publica con [GitHub Pages](https://gvidal5.github.io/juegos/) desde la raíz de la rama `main`.
 
 **Portal:** https://gvidal5.github.io/juegos/
 
