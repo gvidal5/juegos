@@ -110,6 +110,17 @@ button{font-family:inherit;}
 .btn.sec{background:var(--azul);color:#fff;box-shadow:none;font-size:15px;padding:13px;font-weight:700;}
 .btn.ghost{background:#fff;color:var(--azul);border:1.5px solid var(--azul);box-shadow:none;font-size:15px;padding:12px;font-weight:700;}
 .btn:active{transform:scale(.98);}
+a.btn{display:block;text-decoration:none;text-align:center;}
+.btn.menu{background:var(--azul);color:#fff;box-shadow:none;font-size:15px;padding:13.5px 12px;font-weight:700;}
+.end-actions{display:flex;flex-direction:column;gap:10px;width:100%;max-width:400px;margin-top:16px;padding-top:14px;border-top:1px solid #c8d3df;}
+.end-actions .btn{margin-top:0;}
+.btn.menu{background:var(--marino);color:#fff;border-bottom:4px solid var(--amarillo);}
+.next-hint{font-size:13px;color:var(--muted);text-align:center;line-height:1.35;margin:0 4px;}
+.next-btn{display:block;width:100%;border:none;border-radius:14px;padding:14px 16px;font-size:16.5px;font-weight:800;cursor:pointer;background:var(--azul);color:#fff;border-bottom:4px solid var(--amarillo);box-shadow:0 4px 12px rgba(0,75,147,.28);animation:nextIn .35s ease-out;}
+.next-btn:hover{background:#00407d;}
+.next-btn:active{transform:scale(.98);}
+.next-btn:focus-visible,.btn.menu:focus-visible{outline:3px solid var(--amarillo);outline-offset:2px;}
+@keyframes nextIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
 .meta{margin-top:12px;font-size:12.5px;color:var(--muted);}
 .res-head{width:100%;max-width:400px;border-radius:16px;color:#fff;padding:16px;margin-top:8px;}
 .res-head.good{background:var(--good);} .res-head.mid{background:var(--mid);} .res-head.bad{background:var(--bad);}
@@ -299,6 +310,7 @@ const baseIVA = (total) => total / (1 + EMPRESA.iva / 100);
 //  NOTE("texto")           → aviso centrado del sistema · DAY("Hoy","10:30") separador de día
 //  ACT("texto", seg)       → acción con espera corta y barra
 //  CHAT("clave")           → cambia de conversación (clave en STORY.contacts)
+//  NEXT("Texto ➜")         → pausa con botón: el alumno lee el último mensaje y pasa cuando quiera
 // =========================================================================
 const T     = (text)                 => ({ type:"text", text });
 const ME    = (text)                 => ({ type:"text", text, out:true });
@@ -312,6 +324,7 @@ const NOTE  = (text, cls="")         => ({ type:"note", text, cls });
 const DAY   = (label, clock)         => ({ type:"day", label, clock });
 const ACT   = (text, wait=2)         => ({ type:"action", text, wait });
 const CHAT  = (key)                  => ({ type:"chat", key });
+const NEXT  = (label)                => ({ type:"next", label });   // pausa: botón para pasar al siguiente caso
 
 // =========================================================================
 //  IMÁGENES SVG (se generan con los datos del catálogo)
@@ -475,6 +488,7 @@ const STORY = {
   start: "s01",
   steps: 14,
   clockStart: 8*60 + 55,
+  nextLabel: "Siguiente cliente ➜",
   firstContact: "paco",
   comps: { com:"Comunicación", prod:"Conocimiento del producto", legal:"Protocolo y RGPD", dig:"Digitalización" },
   contacts: {
@@ -512,6 +526,7 @@ const STORY = {
     // ------------------------------ CASO 1 · MARTA ------------------------------
     m02: { step:2, topic:"Caso 1 · Saludo a Marta", ask:"Primera respuesta a Marta. ¿Qué tono usas?", comp:["com"],
       messages:[
+        NEXT("Atender al primer cliente ➜"),
         NOTE("📥 Caso 1 de 3 · Cliente que pide presupuesto"),
         CHAT("marta"),
         T("¡Hola!! 😊 Me acabo de mudar y quería info de la cama SIËSTA y del armario PERCHÄSEN. ¿Hacéis montaje?"),
@@ -597,6 +612,7 @@ const STORY = {
     // ------------------------------ CASO 2 · JAVI ------------------------------
     j07: { step:7, topic:"Caso 2 · Cliente enfadado", ask:"Javi está muy enfadado. ¿Cómo respondes?", comp:["com","legal"],
       messages:[
+        NEXT("Siguiente cliente ➜"),
         NOTE("📥 Caso 2 de 3 · Cliente con una reclamación"),
         CHAT("javi"),
         AUDIO(12, "¡Buenas! Mire, llevo TRES HORAS montando el armario PERCHÄSEN y me falta una pieza. ¡Una vergüenza! Esto no me lo vuelvo a comprar en la vida."),
@@ -676,6 +692,7 @@ const STORY = {
     // ------------------------------ CASO 3 · CARMEN ------------------------------
     c11: { step:11, topic:"Caso 3 · Precio de un pedido grande", ask:"¿Qué precio le das a Carmen?", comp:["prod"],
       messages:[
+        NEXT("Siguiente cliente ➜"),
         NOTE("📥 Caso 3 de 3 · Empresa con un pedido grande y factura"),
         CHAT("carmen"),
         T("Buenos días. Soy Carmen Ruiz, responsable de compras de Coworking Albufera, S.L. Necesitamos **12 escritorios CURRÄNTE** y **12 sillas SIÉNTATEN**. ¿Qué precio nos podéis hacer?"),
@@ -740,7 +757,7 @@ const STORY = {
           fb:"Derivar bien es gestionar tú la consulta con el departamento, no pasarle el problema al cliente." },
       ]},
 
-    fin: { messages:[ NOTE("🕖 19:00 · Fin de la jornada. Paco revisa tus chats..."), CHAT("paco"),
+    fin: { messages:[ NEXT("Terminar la jornada ➜"), NOTE("🕖 19:00 · Fin de la jornada. Paco revisa tus chats..."), CHAT("paco"),
       (s) => { let g = 0, m = 0; Object.values(s.score).forEach(x => { g += x.got; m += x.max; }); const p = m ? g / m : 0;
         return AUDIO(9, s.flags.has("rgpd") ? "{{NOMBRE}}, tenemos que hablar. Hoy se han compartido datos de clientes sin permiso, y eso es muy serio. Mañana repasamos juntos el protocolo de protección de datos."
           : p >= 0.8 ? "¡{{NOMBRE}}, menudo primer día! Clientes contentos, datos protegidos y la bandeja ordenada. Te has ganado la llave Allen de oro."
@@ -874,6 +891,7 @@ async function deliver(m, my){
   if (my !== run) return;
   if (typeof m === "function") m = m(state);
   if (!m) return;
+  if (m.type === "next"){ if (chat.children.length) await waitNext(m.label || STORY.nextLabel || "Continuar ➜", my, m.hint); return; }
   if (m.type === "chat"){ await switchChat(m.key, my); return; }
   if (m.type === "action"){
     const w = document.createElement("div"); w.className = "waiting"; w.innerHTML = md(m.text) + '<div class="bar"><i></i></div>'; chat.appendChild(w); scroll();
@@ -897,6 +915,19 @@ async function switchChat(key, my){
   chat.innerHTML = ""; setContact(key);
   if (c.intro) note(c.intro, "sec");
   await sleep(300);
+}
+
+// ---------- pausa entre casos: botón «Siguiente» ----------
+function waitNext(label, my, hint){
+  return new Promise(res => {
+    if (my !== run) return res();
+    tray.innerHTML = "";
+    const h = document.createElement("div"); h.className = "next-hint"; h.textContent = hint || STORY.nextHint || "✅ Caso terminado. Lee con calma el último mensaje y pasa cuando quieras."; tray.appendChild(h);
+    const b = document.createElement("button"); b.className = "next-btn"; b.type = "button"; b.textContent = label;
+    b.onclick = () => { b.disabled = true; tray.innerHTML = ""; res(); };
+    tray.appendChild(b); scroll();
+    try { b.focus({ preventScroll: true }); } catch(e){}
+  });
 }
 
 // ---------- progreso ----------
@@ -949,8 +980,9 @@ async function finish(key, my){
   paintProgress(STORY.steps);
   const e = document.createElement("div"); e.className = "end " + E.type; e.innerHTML = `<strong>${esc(E.emoji || "")} ${esc(E.title)}</strong>${md(E.short || "")}`; chat.appendChild(e); scroll();
   try { const key2 = "tornillon_" + STORY.id, f = JSON.parse(localStorage.getItem(key2) || "[]"); if (!f.includes(k)) f.push(k); localStorage.setItem(key2, JSON.stringify(f)); state.found = f; } catch(err){ state.found = [k]; }
-  const b = document.createElement("button"); b.className = "btn"; b.textContent = "Ver mi resultado"; b.style.alignSelf = "center"; b.onclick = showResult; chat.appendChild(b); scroll();
-  await sleep(1400); if (my === run) showResult();
+  // ya no saltamos solos al resultado: el alumno lee el final y pulsa el botón
+  await waitNext("Ver mi resultado ➜", my, "🏁 ¡Fin! Lee el último mensaje y, cuando quieras, mira tu resultado.");
+  if (my === run) showResult();
 }
 
 // ---------- resultado ----------
@@ -986,7 +1018,10 @@ function showResult(){
   <button class="btn" id="bCopy">📋 Copiar resultado</button>
   <button class="btn sec" id="bDown">⬇️ Descargar resultado (.txt)</button>
   <div class="copied" id="copied"></div>
-  <button class="btn ghost" id="bAgain">🔁 Volver a jugar</button>
+  <div class="end-actions">
+    <button class="btn ghost" id="bAgain" type="button">🔁 Empezar de nuevo</button>
+    <a class="btn menu" id="bMenu" href="index.html">🏠 Volver al menú</a>
+  </div>
   <div class="meta">${esc(EMPRESA.lema)} · ${esc(STORY.subtitle)}</div>`;
   R.hidden = false; R.classList.remove("hide"); R.scrollTop = 0;
   $("bCopy").onclick = copyResult; $("bDown").onclick = downloadResult; $("bAgain").onclick = () => { R.hidden = true; start(); };
